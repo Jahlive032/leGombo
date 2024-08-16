@@ -120,7 +120,7 @@ const HeroSection = () =>{
                                             {price} FCFA
                                         </span>
                                     </div>
-                                    <button className={twMerge("btn btn-primary w-full mt-[30px]", inverse === true && 'bg-white text-black')}>
+                                    <button className={twMerge("btn bg-[#50c878] py-2 rounded-md text-white w-full mt-[30px]", inverse === true && 'bg-black text-white')}>
                                         {buttonText}
                                     </button>
                                     <ul className="flex flex-col gap-5 mt-8">
