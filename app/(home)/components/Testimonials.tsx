@@ -31,13 +31,13 @@ const reviews = [
   {
     name: "Jenny",
     username: "@jenny",
-    body: "J'adore la flexibilité des cartes virtuelles de eGO Transfer. Que ce soit pour des achats en ligne ou pour réserver des services, tout gérer depuis une seule application, en toute sécurité. C'est un vrai game-changer !",
+    body: "J'adore la flexibilité des cartes virtuelles de leGombo. Que ce soit pour des achats en ligne ou pour réserver des services, tout gérer depuis une seule application, en toute sécurité. C'est un vrai game-changer !",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
     name: "James",
     username: "@james",
-    body: "Avec eGo Transfer, j'ai enfin trouvé une solution qui me permet de sécuriser mes transactions tout en ayant un contrôle total sur mes dépenses.",
+    body: "Avec leGombo, j'ai enfin trouvé une solution qui me permet de sécuriser mes transactions tout en ayant un contrôle total sur mes dépenses.",
     img: "https://avatar.vercel.sh/james",
   },
 ];
@@ -87,7 +87,12 @@ const ReviewCard = ({
 export function Testimonials() {
   return (
     <section>
-
+      <div className="section-heading">
+          <div className="flex justify-center">
+            <div className="tag">Témoignages</div>
+          </div>
+          <h2 className="text-center text-4xl font-bold mt-5 bg-clip-text text-transparent bg-gradient-to-r from-green-700 from-10% to-yellow-500 to-50%">Nos clients nous aiment</h2>
+        </div>
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (
