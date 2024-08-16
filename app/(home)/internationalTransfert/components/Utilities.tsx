@@ -81,7 +81,7 @@ const Utilities = () =>{
                                     </div>
                                 </motion.div>
                             </div>
-                            <div className="md:w-[50%]">
+                            <div className="md:w-[50%] max-sm:py-7">
                                 <motion.div
                                     initial={{ opacity: 0, x: -20}}
                                     whileInView={{ opacity: 1, x: 0}}

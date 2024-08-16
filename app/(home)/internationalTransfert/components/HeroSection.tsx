@@ -18,7 +18,7 @@ const HeroSection = () =>{
     const translateY = useTransform(scrollYProgress, [0, 1], [200, -200]);
 
     return(
-        <section ref={sectionRef} className="mt-20">
+        <section ref={sectionRef} className="md:mt-20 mt-7">
             <div className="container ">
                 <div className="md:flex md:flex-col justify-center items-center overflow-hidden">
                     <motion.div className="">
@@ -33,9 +33,9 @@ const HeroSection = () =>{
                         </div>
                     </motion.div>
 
-                    <div className="">
+             
                         <MacbookScroll/>
-                    </div>
+                  
 
                     <motion.img
                         src={dollar.src}

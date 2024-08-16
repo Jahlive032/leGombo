@@ -80,7 +80,7 @@ const AccountToMobile = () =>{
                                 </motion.div>
                             </div>
 
-                            <div className="md:w-[40%]">
+                            <div className="md:w-[40%] max-sm:mt-7">
                                 <motion.div
                                     initial={{ opacity: 0, x: -20}}
                                     whileInView={{ opacity: 1, x: 0}}

@@ -11,7 +11,7 @@ import Spline from '@splinetool/react-spline/next';
 const HeroSection = () =>{
 
     return(
-        <section className="mt-20 py-20 mb-20">
+        <section className="md:mt-20 md:py-20 py-0 mt-7 mb-20">
             <div className="container w-[80%] mx-auto">
                 <div className="md:flex">
                     <motion.div 
@@ -26,7 +26,7 @@ const HeroSection = () =>{
                         <p className="text-xl sm:text-2xl text-center md:text-left">
                             Envoyer de l&apos;argent à votre famille, à des amis, ou régler des transactions commerciales
                         </p>
-                        <div className="mt-[30px] sm:flex items-center justify-center text-center md:justify-start">
+                        <div className="mt-[30px] flex items-center justify-center text-center md:justify-start">
                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                Faîtes votre première transaction
                             </Button>
