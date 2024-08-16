@@ -1,5 +1,3 @@
-"use client"
-
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 
@@ -25,8 +23,8 @@ export default function RootLayout({
       
       <body className={clsx(inter.className,"h-full flex flex-col w-full overflow-x-hidden sm:overflow-x-hidden")}>
         {children}
-        <GoogleAnalytics gaId="G-RFX8L4YXJH" />
       </body>
+      <GoogleAnalytics gaId="G-RFX8L4YXJH" />
     </html>
   );
 }
