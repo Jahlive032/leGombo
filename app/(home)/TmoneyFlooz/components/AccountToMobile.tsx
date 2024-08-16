@@ -25,7 +25,7 @@ const AccountToMobile = () =>{
                                     className=""
                                 >
                                     <div className="text-center md:text-left text-4xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-800 from-10% to-black to-60% mt-5">
-                                        <h1 className="py-3">Comptes Bancaires vers Mobile Money</h1>
+                                        <h1 className="py-3">Cartes Bancaires vers Mobile Money</h1>
                                     </div>
                                     <div>
                                         <p className="text-xl py-3 md:text-left text-center">Vous avez un accès total à vos fonds, vous pouvez décider de l&apos;alimenter ou de retirer votre argent où et quand vous le voulez !</p>
