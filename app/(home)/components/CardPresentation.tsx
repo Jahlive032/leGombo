@@ -18,7 +18,7 @@ const CardPresentation = () => {
             title: "Sécurité à Portée de Main",
             description: "Créez votre carte virtuelle en quelques clics et bénéficiez d'une sécurité optimale pour toutes vos transactions en ligne. Notre service de création de cartes virtuelles vous offre la flexibilité d'une carte de paiement, sans les contraintes d'une carte physique. Sécurisez vos achats en ligne dès aujourd'hui avec notre solution innovante.",
             buttonText: "Générez votre carte",
-            imgSrc: "/props-black-credit-card.png", // Chemin de l'image pour cette section
+            imgSrc: "/props-black-credit-card.webp", // Chemin de l'image pour cette section
         },
         Liberté: {
             title: "Libérez-vous des Risques avec une Carte Virtuelle",
@@ -136,31 +136,31 @@ const CardPresentation = () => {
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
                                 title=""
-                                url="/leGombo (1).png"
+                                url="/leGombo (1) (1).webp"
                             />
                                 
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
                                 title=""
-                                url="/leGombo (1).png"
+                                url="/leGombo (1) (1).webp"
                             /> 
 
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
                                 title=""
-                                url="/leGombo (1).png"
+                                url="/leGombo (1) (1).webp"
                             />    
 
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
                                 title=""
-                                url="/leGombo (1).png"
+                                url="/leGombo (1) (1).webp"
                             /> 
 
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
                                 title=""
-                                url="/leGombo (2).png"
+                                url="/leGombo (2).webp"
                             />                
                         </div>
                         <motion.div

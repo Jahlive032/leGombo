@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import carteBancaire from "@/assets/carteBancaire.png"
+import carteBancaire from "@/assets/carteBancaire.webp"
 import phone1 from '@/assets/eGoTransfer1.webp'
 
 const PhoneCardAnimation: React.FC = () => {
