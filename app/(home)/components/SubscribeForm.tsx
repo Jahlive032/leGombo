@@ -15,7 +15,7 @@ const SubscribeForm = () =>{
                 type="submit"
                 className="mt-2 w-full bg-[#50c878]  text-white px-4 py-2 rounded-lg"
                 >
-                S'inscrire
+                S&apos;inscrire
                 </button>
             </form>
             {/* <p className="text-gray-500 mt-4">
