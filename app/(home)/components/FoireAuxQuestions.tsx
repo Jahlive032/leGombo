@@ -12,11 +12,11 @@ const FoireAuxQuestions = () =>{
 
   return(
     <section className="py-20 items-center flex flex-col">
-      <h1 className="tag text-2xl">Foire Aux Questions</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">Foire Aux Questions</h1>
       <div className="w-[60%] mx-auto">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>Qui sommes-nous?</AccordionTrigger>
             <AccordionContent>
               Yes. It adheres to the WAI-ARIA design pattern.
             </AccordionContent>

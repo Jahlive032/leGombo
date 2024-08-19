@@ -167,7 +167,7 @@ const Header = () =>{
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-[#50c878] dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Acceuil

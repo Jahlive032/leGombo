@@ -90,7 +90,7 @@ const HeroSection = () =>{
     return(
         <section className="bg-[#F0F0F0] h-[700px] w-full">
             <RetroGrid/>
-            <div className={`container py-24 h-[700px] lg:py-28 relative max-md:h-auto ${styles.section} ${isBlurred ? styles.blurred : ''}`}>
+            <div className={`container md:py-24 h-[700px] lg:py-28 relative max-md:h-auto ${styles.section} ${isBlurred ? styles.blurred : ''}`}>
                 <div className="flex justify-between w-full max-md:justify-center max-md:flex-col  items-center gap-4">
                     <div className={`flex ${styles.content}`}>
                         <div className="md:flex">

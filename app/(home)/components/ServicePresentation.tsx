@@ -15,7 +15,7 @@ const ServicePresentation = () => {
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {/* Carte de transfert International */}
-        <div className={`${styles.card} mx-auto max-w-[350px] hover:bg-green-300`}>
+        <div className={`${styles.card} mx-auto max-w-[350px] hover:bg-blue-600`}>
           <div className="rounded-lg">
             <Image
               src={globe}
@@ -53,7 +53,7 @@ const ServicePresentation = () => {
         </div>
 
         {/* Carte de Transfert entre Tmoney et Flooz */}
-        <div className={`${styles.card} mx-auto max-w-[350px]`}>
+        <div className={`${styles.card} mx-auto max-w-[350px] hover:bg-blue-600`}>
           <div className="p-5">
             <div className="inline-flex text-sm px-1 py-1.5 rounded-xl border-white/20">
               <motion.span
@@ -92,7 +92,7 @@ const ServicePresentation = () => {
         </div>
 
         {/* Carte de Compte bancaire vers Mobile Money */}
-        <div className={`${styles.card} mx-auto max-w-[350px]`}>
+        <div className={`${styles.card} mx-auto max-w-[350px] hover:bg-blue-600`}>
           <div className="rounded-lg">
             <Image
               src={globe}

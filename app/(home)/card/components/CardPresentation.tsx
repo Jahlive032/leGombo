@@ -1,3 +1,4 @@
+"use client"
 
 import WordRotate from '@/components/magicui/word-rotate';
 import { Button } from '@/components/ui/button';
