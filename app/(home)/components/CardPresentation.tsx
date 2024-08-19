@@ -5,7 +5,7 @@ import { FaLock, FaChartPie, FaLightbulb } from "react-icons/fa"; // Importation
 import { Button } from "@/components/ui/button"; // Importation d'un composant Button personnalisé
 import { easeOut, motion } from "framer-motion"; // Importation de framer-motion pour les animations
 import Image from "next/image"; // Importation du composant Image de Next.js pour optimiser les images
-import carteBancaire from "@/public/carteBancaire.png"; // Importation d'une image locale
+import carteBancaire from "@/public/carteBancaire.webp"; // Importation d'une image locale
 import { MiniCardHero } from "./MiniCardHero"; // Importation du composant MiniCardHero
 
 const CardPresentation = () => {
