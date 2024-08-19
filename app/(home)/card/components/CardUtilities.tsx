@@ -1,4 +1,3 @@
-"use client"
 
 import Image from "next/image";
 import carteBancaire from "@/assets/carteBancaire.png"
@@ -19,7 +18,7 @@ const steps = [
     },
     { 
         title: "Mettez de l'argent de coté automatiquement", 
-        description: "This is the second step of the presentation.", 
+        description: "Gagnez en tranquillité d'esprit grâce à nos cartes virtuelles adaptées à vos besoins, tout en bénéficiant d'une fonctionnalité innovante d'épargne automatique. ", 
         imageSrc: "/dashboard2.png" 
     },
     
