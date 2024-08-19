@@ -44,6 +44,7 @@ const PhoneCardAnimation: React.FC = () => {
               width={350}
               className='-mt-28'
               alt='egoTransfer phone'
+              loading="eager"
             />
             <motion.div className='-z-10 max-sm:-ml-14'>
               <animated.div
