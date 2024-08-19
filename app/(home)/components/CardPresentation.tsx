@@ -24,13 +24,13 @@ const CardPresentation = () => {
             title: "Libérez-vous des Risques avec une Carte Virtuelle",
             description: "Dites adieu aux risques de fraude grâce à nos cartes virtuelles sécurisées. Créez en un instant votre carte de paiement virtuelle et gérez vos dépenses en toute tranquillité. Votre sécurité est notre priorité, profitez d'une protection maximale pour chaque transaction.",
             buttonText: "Générez votre carte",
-            imgSrc: "/3d-business-credit-cards-1.png", // Chemin de l'image pour cette section
+            imgSrc: "/3d-business-credit-cards-1.webp", // Chemin de l'image pour cette section
         },
         Flexibilité: {
             title: "Une Carte Virtuelle pour Chaque Besoin : Flexibilité",
             description: "Créez des cartes virtuelles sur mesure pour chaque occasion. Que ce soit pour des achats uniques ou récurrents, notre service de création de cartes virtuelles s'adapte à vos besoins avec une flexibilité sans précédent. Transformez votre façon de payer en ligne dès aujourd'hui.",
             buttonText: "Générez votre carte",
-            imgSrc: "/3d-business-credit-cards-1.png", // Chemin de l'image pour cette section
+            imgSrc: "/3d-business-credit-cards-1.webp", // Chemin de l'image pour cette section
         }
     };
 
