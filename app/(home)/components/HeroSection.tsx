@@ -54,19 +54,14 @@ const HeroSection = () =>{
             setPosition(window.scrollY);
             
             if (window.scrollY > 0 && window.scrollY <= 1200) {              
-                // setScale(1 - (window.scrollY / 1200));
-
                 setPositionY(1 - (window.scrollY / window.innerWidth));
 
-                // setScale(1);
                 if (position >= 300) {
                     setRotate(window.scrollY * 0.4);
                 }
             } else if (window.scrollY > 1125) {
                 
-                // setScale(window.scrollY * 0.0002)
             } else {
-                // setScale(1);
                 setRotate(300 * 0.2);
             }
         };
@@ -138,30 +133,6 @@ const HeroSection = () =>{
                             </motion.div>
 
                             <div className="flex-1 flex justify-center mt-10 max-md:py-24 p-6 md:ml-10">
-                                <motion.div
-                                    ref={ref}
-                                    style={{
-                                        translateY: position <= 1200 ? position : 1200,                                         rotate: rotate,
-                                        opacity: 1,
-                                        // scale: scale <= 1 ? scale : 1,
-                                        // translateX:positionX * (0.2),
-                                        color: isThirdSection ? 'red' : 'inherit', 
-                                        
-                                    }}
-
-                                    // animate={{
-                                    //     translateX: positionX >= 1480 ? (window.innerWidth / 2) - (800 / 2) : 0, // animate horizontal translation
-                                    // }}
-
-                                    transition={{
-                                        duration: 1,
-                                        ease: 'easeInOut'
-                                    }}
-                                    className={`absolute -z-30`}
-                                >
-                                    {/* <Image className="" src="/carteBancaire.png" width={300} height={300} style={{ display: isHidden ? "none" : "", zIndex: -20 }} alt="carte-bancaire"/> */}
-                                </motion.div>
-
                                 <div className="">
                                     <PhoneCardAnimation/>
                                 </div>
@@ -172,7 +143,6 @@ const HeroSection = () =>{
 
                                 <div className="relative">
                                     <MiniCardHero className="absolute bottom-[200px] right-[290px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/visa.png" />
-                                    {/* <img src="/phone.png" alt="" /> */}
                                 </div>
                             </div>
                         </div>

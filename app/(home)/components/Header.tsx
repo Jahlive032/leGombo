@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 // import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@/assets/logo3.png"
+import logo from "@/public/logo4.png"
 import logoMenu from "@/assets/menu.svg"
 import { motion } from "framer-motion";
 

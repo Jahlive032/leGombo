@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       
-      <body className={clsx(inter.className,"h-full flex flex-col w-full overflow-x-hidden sm:overflow-x-hidden")}>
+      <body className={clsx(inter.className," flex flex-col w-full overflow-x-hidden")}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-RFX8L4YXJH" />

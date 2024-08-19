@@ -89,9 +89,8 @@ export function Testimonials() {
     <section>
       <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Témoignages</div>
+            <h1 className="text-4xl font-bold text-center mb-8">Nos témoignages</h1>
           </div>
-          <h2 className="text-center text-4xl font-bold mt-5 bg-clip-text text-transparent bg-gradient-to-r from-green-700 from-10% to-yellow-500 to-50%">Nos clients nous aiment</h2>
         </div>
         <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
             <Marquee pauseOnHover className="[--duration:20s]">

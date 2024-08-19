@@ -6,6 +6,7 @@ import CardPersentation from "./components/CardPresentation";
 import ServicePresentation from "./components/ServicePresentation";
 import { Testimonials } from "./components/Testimonials";
 import FoireAuxQuestions from "./components/FoireAuxQuestions";
+import ActionSection from "./components/ActionSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <ServicePresentation/>
       <Testimonials/>
       <FoireAuxQuestions/>
+      {/* <ActionSection/> */}
       <Footer/>
     </main>
   );

@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import carteBancaire from "@/assets/carteBancaire.png"
-import phone1 from '@/assets/eGoTransfer1.png'
+import phone1 from '@/assets/eGoTransfer1.webp'
 
 const PhoneCardAnimation: React.FC = () => {
 
@@ -13,38 +13,39 @@ const PhoneCardAnimation: React.FC = () => {
     const cardRef = useRef<HTMLDivElement | null>(null);
     const [isHidden, setIsHidden] = useState(false);
 
-
     const handleScroll = () => {
-      if (window.scrollY >= 820) {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY >= 820) {
         setIsHidden(true);
+        setScrollY(820);  // Limite le scroll à 820px
       } else {
         setIsHidden(false);
+        setScrollY(currentScrollY);
       }
-      setScrollY(window.scrollY);
     };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
-  const cardSpring = useSpring({
-    transform: `translateY(${scrollY}px)  rotate(${scrollY / 10}deg)`,
-  });
+    const cardSpring = useSpring({
+      transform: `translateY(${scrollY}px) scale(${1 - scrollY / 2000}) rotate(${scrollY / 10}deg)`,
+    });
 
-
-  return (
-    <div style={{ }}>
-      <div style={{  display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ position: 'relative' }}>
-          <Image
-            src={phone1}
-            width={350}
-            className='-mt-28'
-            alt='egoTransfer phone'
-          />
+    return (
+      <div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <Image
+              src={phone1}
+              width={350}
+              className='-mt-28'
+              alt='egoTransfer phone'
+              loading="eager"
+            />
             <motion.div className='-z-10 max-sm:-ml-14'>
               <animated.div
                 ref={cardRef}
@@ -53,7 +54,6 @@ const PhoneCardAnimation: React.FC = () => {
                   width: '400px',
                   height: '100px',
                   backgroundColor: 'none',
-                  borderRadius: '',
                   top: '0px',
                   ...cardSpring,
                 }}
@@ -70,11 +70,10 @@ const PhoneCardAnimation: React.FC = () => {
               </animated.div>
             </motion.div>
             <p style={{ color: 'white', textAlign: 'center', lineHeight: '100px' }}></p>
-          
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default PhoneCardAnimation;
