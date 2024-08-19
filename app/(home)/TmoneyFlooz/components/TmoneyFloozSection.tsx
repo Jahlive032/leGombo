@@ -2,13 +2,26 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Image from "next/image"
-import check from "@/public/check.svg"
+import Image from "next/image";
+import check from "@/public/check.svg";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useEffect, useState } from "react";
 
+const TmoneyFloozSection = () => {
+    const [isLoading, setIsLoading] = useState(true);
 
-const TmoneyFloozSection = () =>{
+    useEffect(() => {
+        // Simule un délai de chargement pour le skeleton
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2500); // Adjust the timeout as needed
 
-    return(
+        return () => clearTimeout(timer);
+    }, []);
+
+   
+
+    return (
         <section className="bg-green-200">
             <div>
                 <div className=" ">
@@ -16,19 +29,29 @@ const TmoneyFloozSection = () =>{
                         <div className="md:flex items-center w-full gap-5 py-10">
                             <div className="md:w-[50%]">
                                 <motion.div
-                                    initial={{ opacity: 0, x: -20}}
-                                    whileInView={{ opacity: 1, x: 0}}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5, duration: 0.7, ease: "easeInOut" }}
                                     className=""
                                 >
-                                    <iframe src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY" className='w-full h-[550px] rounded-lg'></iframe>
+                                    {isLoading ? (
+                                        <Skeleton className="w-full h-[550px] rounded-lg" />
+                                    ) : (
+                                        <iframe
+                                            src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY"
+                                            className="w-full h-[550px] rounded-lg"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    )}
                                 </motion.div>
                             </div>
 
                             <div className="md:w-[50%]">
-                                <motion.div 
-                                    initial={{ opacity: 0, x: -20}}
-                                    whileInView={{ opacity: 1, x: 0}}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5, duration: 0.7, ease: "easeInOut" }}
                                     className=""
                                 >
@@ -40,8 +63,8 @@ const TmoneyFloozSection = () =>{
                                     </div>
 
                                     <div>
-                                        <ul className=" space-y-5 border-gray-200">
-                                            <li className="flex space-x-3 ">
+                                        <ul className="space-y-5 border-gray-200">
+                                            <li className="flex space-x-3">
                                                 <Image
                                                     src={check}
                                                     alt="check"
@@ -50,7 +73,7 @@ const TmoneyFloozSection = () =>{
                                                 />
                                                 <span><strong>Transfert Rapide</strong> : Transferts instantanés entre Tmoney et Flooz.</span>
                                             </li>
-                                            <li className="flex space-x-3 ">
+                                            <li className="flex space-x-3">
                                                 <Image
                                                     src={check}
                                                     alt="check"
@@ -59,7 +82,7 @@ const TmoneyFloozSection = () =>{
                                                 />
                                                 <span><strong>Accéssibilité</strong>: Processus simple et direct sans frais cachés.</span>
                                             </li>
-                                            <li className="flex space-x-3 ">
+                                            <li className="flex space-x-3">
                                                 <Image
                                                     src={check}
                                                     alt="check"
@@ -68,7 +91,7 @@ const TmoneyFloozSection = () =>{
                                                 />
                                                 <span><strong>Support Client</strong>: Disponible 24/7, permettant des transactions à tout moment.</span>
                                             </li>
-                                            <li className="flex space-x-3 ">
+                                            <li className="flex space-x-3">
                                                 <Image
                                                     src={check}
                                                     alt="check"
@@ -80,8 +103,6 @@ const TmoneyFloozSection = () =>{
                                         </ul>
                                     </div>
 
-                                    
-
                                     <div className="mt-[30px] md:text-left text-center">
                                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                             Transférer maintenant
@@ -91,11 +112,10 @@ const TmoneyFloozSection = () =>{
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default TmoneyFloozSection;

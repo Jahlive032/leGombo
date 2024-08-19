@@ -11,7 +11,7 @@ import { AnimatedListDemo } from "./AnimatedListDemo";
 const AccountToMobile = () =>{
 
     return(
-        <section className="bg-yellow-200">
+        <section id="section2" className="bg-yellow-200">
             <div>
                 <div className=" ">
                     <div className="container">

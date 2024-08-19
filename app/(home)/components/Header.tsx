@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -9,6 +9,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/public/logo4.png"
 import logoMenu from "@/assets/menu.svg"
 import { motion } from "framer-motion";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import TmoneyFloozSection from "../TmoneyFlooz/components/TmoneyFloozSection";
+
 
 
 
@@ -60,7 +63,7 @@ const Header = () =>{
           <SheetContent>
             <div className='flex flex-col items-center'>
             <div className="flex flex-col gap-5 mr-[100px]">
-              <Link href={"/"}>Acceuil</Link>
+              <Link to="/" >Acceuil</Link>
 
               <div className="md:flex md:items-center md:justify-between w-full">
                 <ul className="flex flex-col font-medium md:flex-row md:mt-0 ">
@@ -142,12 +145,12 @@ const Header = () =>{
                 </ul>
               </div>
               <Link 
-                href="/tarifs"
+              to="/tarifs"
               >
                 Tarifs
               </Link>
 
-              <Link href={"#"}>Contact</Link>
+              <Link to="/contact">Contact</Link>
             </div>
             
               
@@ -195,6 +198,7 @@ const Header = () =>{
                 {isDropdownOpen && (
                   <div className="absolute z-10 w-[300px] p-4 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
                     <div className="pb-0 text-gray-900 dark:text-white">
+                      <Router>
                       <ul className="space-y-4">
                         <li className="flex items-center gap-2">
                           <Image
@@ -238,8 +242,34 @@ const Header = () =>{
                             Transfert entre Tmoney et Flooz
                           </a>
                         </li>
+
+                        
+                      
+                        <li className="flex items-center gap-2">
+                          <Image
+                            src="/Orange_Icon_-_Convert.svg"
+                            alt="Image 3"
+                            width={40}
+                            height={40}
+                          />
+                          <a
+                            href="/TmoneyFlooz#section2"
+                            className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
+                          >
+                            Carte bancaire vers Mobile money
+                          </a>
+                        </li>
+
+                  
                         
                       </ul>
+
+                        <Routes>
+                          <Route path="/" element={''} />
+                          <Route path="/TmoneyFlooz" element={<TmoneyFloozSection />} />
+                        </Routes>
+                      </Router>
+                      
                     </div>
                   </div>
                 )}
