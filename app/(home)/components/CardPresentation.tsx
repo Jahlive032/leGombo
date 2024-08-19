@@ -68,8 +68,8 @@ const CardPresentation = () => {
                             src={content[activeSection].imgSrc} 
                             alt={content[activeSection].title} 
                             className="w-full h-auto object-contain"
-                            width={""}
-                            height={""}
+                            width={500}
+                            height={300}
                         />
                     </div>
 
