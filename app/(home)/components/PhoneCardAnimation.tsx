@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import carteBancaire from "@/assets/carteBancaire.webp"
-import phone1 from '@/assets/eGoTransfer1.webp'
+import phone1 from '@/assets/eGoTransfer1 (1).webp'
 
 const PhoneCardAnimation: React.FC = () => {
 
@@ -44,7 +44,6 @@ const PhoneCardAnimation: React.FC = () => {
               width={350}
               className='-mt-28'
               alt='egoTransfer phone'
-              loading="eager"
             />
             <motion.div className='-z-10 max-sm:-ml-14'>
               <animated.div
