@@ -28,7 +28,7 @@ const steps = [
 const CardUtilities = () =>{
 
     return(
-        <section className=" bg-yellow-100 py-10">
+        <section className=" bg-yellow-100 my-10 md:py-0 pt-20 pb-20 md:pb-0">
             <div className="mt-5 py-10">
                 <h1 className='w-full text-center pt-4 font-extrabold tracking-tight leading-none text-3xl md:text-4xl xl:text-5xl'>
                     Avec nos cartes, vous pouvez: 

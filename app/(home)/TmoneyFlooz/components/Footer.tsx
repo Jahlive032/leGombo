@@ -8,15 +8,18 @@ const Footer = () =>{
         <footer className="bg-[#0a74f0] p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 <div>
-                    <Image
-                        src={logo}
-                        alt="logo image"
-                        width={60}
-                        height={60}
-                        className="bg-white rounded-lg"
-                    />
+                    <a href="/">
+                        <Image
+                            src={logo}
+                            alt="logo image"
+                            width={60}
+                            height={60}
+                            className="bg-white rounded-lg"
+                        />
+                    </a>
+                    
                     <p className="text-white mt-4">
-                    leGombo est une plateforme de transfert d&apos;argent sécurisée et conviviale. Transférez de l&apos;argent d&apos;un compte Flooz vers un compte Tmoney ou d&apos;un compte Tmoney vers un compte Flooz.
+                        leGombo est une plateforme de transfert d&apos;argent sécurisée et conviviale. Transférez de l&apos;argent d&apos;un compte Flooz vers un compte Tmoney ou d&apos;un compte Tmoney vers un compte Flooz.
                     </p>
                 </div>
                 <div>

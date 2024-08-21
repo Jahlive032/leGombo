@@ -2,7 +2,8 @@
 
 import styles from "@/app/(home)/styles/App.module.css";
 import globe from "@/assets/transferInternationalLogo.jpg";
-import tmoneyFlooz from "@/assets/transfertTmoneyFloozLogo.jpg";
+import tmoneyFlooz from "@/assets/Design sans titre (6).png";
+import carteBancaireMobileMoney from "@/assets/person-waiting-food-restaurant.webp"
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -95,7 +96,7 @@ const ServicePresentation = () => {
         <div className={`${styles.card} mx-auto max-w-[350px] hover:bg-blue-600`}>
           <div className="rounded-lg">
             <Image
-              src={globe}
+              src={carteBancaireMobileMoney}
               alt="image globe"
               className="rounded-lg rounded-b-none"
             />

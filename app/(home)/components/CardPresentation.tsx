@@ -7,32 +7,70 @@ import { easeOut, motion } from "framer-motion"; // Importation de framer-motion
 import Image from "next/image"; // Importation du composant Image de Next.js pour optimiser les images
 import carteBancaire from "@/public/carteBancaire.webp"; // Importation d'une image locale
 import { MiniCardHero } from "./MiniCardHero"; // Importation du composant MiniCardHero
+import { url } from "inspector";
 
 const CardPresentation = () => {
+
+    const sections = ["Utilité", "Avantage", "Tarification"] as const;
+
+
     // Utilisation d'un état pour gérer la section active
-    const [activeSection, setActiveSection] = useState<"Sécurité" | "Liberté" | "Flexibilité">("Sécurité");
+    const [activeSection, setActiveSection] = useState<typeof sections[number]>("Utilité");
+
+    const [progress, setProgress] = useState(0); // État pour la progression
 
     // Contenus dynamiques pour chaque section
     const content = {
-        Sécurité: {
-            title: "Sécurité à Portée de Main",
-            description: "Créez votre carte virtuelle en quelques clics et bénéficiez d'une sécurité optimale pour toutes vos transactions en ligne. Notre service de création de cartes virtuelles vous offre la flexibilité d'une carte de paiement, sans les contraintes d'une carte physique. Sécurisez vos achats en ligne dès aujourd'hui avec notre solution innovante.",
+        Utilité: {
+            title: "Accès instantanétilité",
+            description: "Contrairement aux cartes physiques qui nécessitent des délais de fabrication et d'expédition, les cartes virtuelles peuvent être générées et utilisées instantanément, parfait pour des besoins immédiats.",
             buttonText: "Générez votre carte",
             imgSrc: "/props-black-credit-card.webp", // Chemin de l'image pour cette section
         },
-        Liberté: {
-            title: "Libérez-vous des Risques avec une Carte Virtuelle",
-            description: "Dites adieu aux risques de fraude grâce à nos cartes virtuelles sécurisées. Créez en un instant votre carte de paiement virtuelle et gérez vos dépenses en toute tranquillité. Votre sécurité est notre priorité, profitez d'une protection maximale pour chaque transaction.",
+        Avantage: {
+            title: "Personnalisation poussée",
+            description: "Nos cartes virtuelles peuvent être personnalisées selon vos besoins spécifiques. Que ce soit pour des achats ponctuels, des abonnements, ou des dépenses professionnelles, vous avez un contrôle total sur les limites et les paramètres de chaque carte.",
             buttonText: "Générez votre carte",
             imgSrc: "/3d-business-credit-cards-1.webp", // Chemin de l'image pour cette section
         },
-        Flexibilité: {
-            title: "Une Carte Virtuelle pour Chaque Besoin : Flexibilité",
-            description: "Créez des cartes virtuelles sur mesure pour chaque occasion. Que ce soit pour des achats uniques ou récurrents, notre service de création de cartes virtuelles s'adapte à vos besoins avec une flexibilité sans précédent. Transformez votre façon de payer en ligne dès aujourd'hui.",
+        Tarification: {
+            title: "Tarification transparente et compétitive",
+            description: "Nous offrons des tarifs clairs et sans frais cachés, ce qui vous permet de mieux contrôler vos dépenses et d'économiser sur le long terme. Vous saurez exactement ce que vous payez et pourquoi.",
             buttonText: "Générez votre carte",
             imgSrc: "/3d-business-credit-cards-1.webp", // Chemin de l'image pour cette section
         }
     };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            const currentIndex = sections.indexOf(activeSection);
+            const nextIndex = (currentIndex + 1) % sections.length;
+            setActiveSection(sections[nextIndex]);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [activeSection]);
+
+    useEffect(() => {
+        const progressTimer = setInterval(() => {
+            setProgress((prev) => {
+                if (prev < 100) {
+                    return prev + 100 / (4 * 10); // Incrémentation de 2.5% chaque 100ms
+                } else {
+                    return 0; // Remet à zéro pour la prochaine section
+                }
+            });
+        }, 100);
+        return () => clearInterval(progressTimer);
+    }, [activeSection]);
+
+    const miniCards = [
+        { url: "/leGombo (1) (1).webp"},
+        { url: "/leGombo (1) (1).webp"},
+        { url: "/leGombo (1) (1).webp"},
+        { url: "/leGombo (1) (1).webp"},
+        { url: "/leGombo (2).webp"}
+    ]
 
     const [isInView, setIsInView] = useState(false);
 
@@ -94,38 +132,54 @@ const CardPresentation = () => {
                 {/* Navigation de pied de page */}
                 <footer className="mt-8 pt-4 w-[80%] mx-auto">
                     <nav className="flex justify-around relative">
-                        {/* Barre de progression pour indiquer la section active */}
                         <div className="absolute top-0 left-0 w-full flex justify-around gap-4">
-                            <div className={`h-1 w-1/3 ${activeSection === "Sécurité" ? "bg-[#40a160]" : "bg-gray-200"}`}></div>
-                            <div className={`h-1 w-1/3 ${activeSection === "Liberté" ? "bg-[#40a160]" : "bg-gray-200"}`}></div>
-                            <div className={`h-1 w-1/3 ${activeSection === "Flexibilité" ? "bg-[#40a160]" : "bg-gray-200"}`}></div>
+                            {sections.map((section, index) => (
+                                <div
+                                    key={index}
+                                    className="h-1 w-1/3 bg-gray-200 relative"
+                                >
+                                    {activeSection === section && (
+                                        <motion.div
+                                            className="h-1 bg-[#40a160]"
+                                            style={{ width: `${progress}%` }}
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${progress}%` }}
+                                            transition={{ duration: 0.1, ease: "linear" }}
+                                        />
+                                    )}
+                                </div>
+                            ))}
                         </div>
 
-                        {/* Éléments du pied de page pour changer de section */}
-                        <div 
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${activeSection === "Sécurité" ? "text-[#40a160]" : "text-gray-800"}`}
-                            onClick={() => setActiveSection("Sécurité")}
+                        <div
+                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
+                                activeSection === "Utilité" ? "text-[#40a160]" : "text-gray-800"
+                            }`}
+                            onClick={() => setActiveSection("Utilité")}
                         >
                             <FaLock className="text-2xl mb-2" />
-                            <span className="font-semibold">Sécurité</span>
+                            <span className="font-semibold">Utilité</span>
                         </div>
-                        <div 
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${activeSection === "Liberté" ? "text-[#40a160]" : "text-gray-800"}`}
-                            onClick={() => setActiveSection("Liberté")}
+                        <div
+                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
+                                activeSection === "Avantage" ? "text-[#40a160]" : "text-gray-800"
+                            }`}
+                            onClick={() => setActiveSection("Avantage")}
                         >
                             <FaChartPie className="text-2xl mb-2" />
-                            <span className="font-semibold">Liberté</span>
+                            <span className="font-semibold">Avantage</span>
                         </div>
-                        <div 
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${activeSection === "Flexibilité" ? "text-[#40a160]" : "text-gray-800"}`}
-                            onClick={() => setActiveSection("Flexibilité")}
+                        <div
+                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
+                                activeSection === "Tarification" ? "text-[#40a160]" : "text-gray-800"
+                            }`}
+                            onClick={() => setActiveSection("Tarification")}
                         >
                             <FaLightbulb className="text-2xl mb-2" />
-                            <span className="font-semibold">Flexibilité</span>
+                            <span className="font-semibold">Tarification</span>
                         </div>
                     </nav>
                 </footer>
-
                 {/* Section additionnelle avec des MiniCards et une image */}
                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
@@ -135,35 +189,14 @@ const CardPresentation = () => {
                 >
                     <div className="flex">
                         <div className="flex max-sm:hidden md:flex-row items-center gap-5">
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1) (1).webp"
-                            />
-                                
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1) (1).webp"
-                            /> 
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1) (1).webp"
-                            />    
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1) (1).webp"
-                            /> 
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (2).webp"
-                            />                
+                            {miniCards.map((card, index) =>(
+                                <MiniCardHero
+                                    key={index}
+                                    className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                    title=""
+                                    url={card.url}
+                                /> 
+                            ))}             
                         </div>
                         <motion.div
                             id="card"

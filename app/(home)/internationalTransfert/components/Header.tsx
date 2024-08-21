@@ -9,8 +9,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/public/logo4.png"
 import logoMenu from "@/assets/menu.svg"
 import { motion } from "framer-motion";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import TmoneyFloozSection from "@/app/(home)/TmoneyFlooz/page"
+import Link from "next/link";
 
 
 
@@ -63,7 +63,7 @@ const Header = () =>{
           <SheetContent>
             <div className='flex flex-col items-center'>
             <div className="flex flex-col gap-5 mr-[100px]">
-              <Link to="/" >Acceuil</Link>
+              <Link href="/" >Acceuil</Link>
 
               <div className="md:flex md:items-center md:justify-between w-full">
                 <ul className="flex flex-col font-medium md:flex-row md:mt-0 ">
@@ -136,6 +136,21 @@ const Header = () =>{
                                 Transfert entre Tmoney et Flooz
                               </a>
                             </li>
+
+                            <li className="flex items-center gap-2">
+                          <Image
+                            src="/Orange_Icon_-_Convert.svg"
+                            alt="Image 3"
+                            width={40}
+                            height={40}
+                          />
+                          <a
+                            href="/TmoneyFlooz#section2"
+                            className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
+                          >
+                            Carte bancaire vers Mobile money
+                          </a>
+                        </li>
                             
                           </ul>
                         </div>
@@ -144,13 +159,8 @@ const Header = () =>{
                   </li>
                 </ul>
               </div>
-              <Link 
-              to="/tarifs"
-              >
-                Tarifs
-              </Link>
 
-              <Link to="/contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </div>
             
               
@@ -198,7 +208,6 @@ const Header = () =>{
                 {isDropdownOpen && (
                   <div className="absolute z-10 w-[300px] p-4 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
                     <div className="pb-0 text-gray-900 dark:text-white">
-                      <Router>
                       <ul className="space-y-4">
                         <li className="flex items-center gap-2">
                           <Image
@@ -263,24 +272,9 @@ const Header = () =>{
                   
                         
                       </ul>
-
-                        <Routes>
-                          <Route path="/" element={''} />
-                          <Route path="/TmoneyFlooz" element={<TmoneyFloozSection />} />
-                        </Routes>
-                      </Router>
-                      
                     </div>
                   </div>
                 )}
-              </li>
-              <li>
-                <a
-                  href="/tarifs"
-                  className="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-white dark:hover:bg-gray-700 dark:hover:text-[#50c878] md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Tarifs
-                </a>
               </li>
               <li>
                 <a
