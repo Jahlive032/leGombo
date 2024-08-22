@@ -6,19 +6,24 @@ import StepByStep from "./StepByStep";
 
 const steps = [
     { 
-        title: "Une totale liberté d'achat sans limites.", 
-        description: "Créez des cartes sur mesure pour chaque achat, projet ou abonnement et profitez d'une flexibilité totale sans restriction. ", 
+        title: "Protection contre les prélèvements non autorisés", 
+        description: "Vous pouvez bloquez ou désactiver une carte virtuelle après un achat, empêchant ainsi toute utilisation ultérieure non autorisée.", 
         imageSrc: "/dashboard1.png" 
     },
     
     { 
-        title: "Simplifiez vos finances avec nos cartes virtuelles", 
-        description: "Créez jusqu'à 5 cartes virtuelles distinctes pour mieux organiser et contrôler vos achats quotidiens.", 
+        title: "Utilisation unique ou récurrente", 
+        description: "Nos cartes virtuelles peuvent être générées pour des paiements uniques ou récurrents, selon vos besoins.", 
         imageSrc: "/dashboard3.png" 
     },
     { 
-        title: "Mettez de l'argent de coté automatiquement", 
-        description: "Gagnez en tranquillité d'esprit grâce à nos cartes virtuelles adaptées à vos besoins, tout en bénéficiant d'une fonctionnalité innovante d'épargne automatique. ", 
+        title: "Options de personnalisation", 
+        description: "Adaptez les paramètres de votre carte virtuelle leGombo selon vos préférences en modifiant l'apparence, avec des limites de dépense ajustables", 
+        imageSrc: "/dashboard2.png" 
+    },
+    { 
+        title: "Créez des Cartes Virtuelles pour vos proches", 
+        description: "Vous pouvez créer une carte pour votre enfant ou toute autre personne tout en conservant un contrôle total. Gérez et rechargez facilement la carte selon vos besoins, tout en surveillant les dépenses en temps réel pour une tranquillité d'esprit totale.", 
         imageSrc: "/dashboard2.png" 
     },
     

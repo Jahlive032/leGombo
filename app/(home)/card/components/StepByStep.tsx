@@ -90,9 +90,11 @@ const PresentationStep: React.FC<PresentationStepProps> = ({ title, description,
         <h2 className="step-title font-bold">{title}</h2>
       </div>
       
-      <p>{description}</p>
+      
       {isSelected && (
-        <div className="progress-bar">
+        <div>
+          <p>{description}</p>
+          <div className="progress-bar">
           <motion.div
             className="progress"
             initial={{ width: 0 }}
@@ -100,6 +102,9 @@ const PresentationStep: React.FC<PresentationStepProps> = ({ title, description,
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           />
         </div>
+        </div>
+        
+       
       )}
       {isSelected && (
         <div className="button-container">
