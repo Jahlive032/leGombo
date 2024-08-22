@@ -16,7 +16,7 @@ const Footer = () =>{
                         className="bg-white rounded-lg"
                     />
                     <p className="text-white mt-4">
-                    leGombo est une plateforme de transfert d&apos;argent sécurisée et conviviale. Transférez de l&apos;argent d&apos;un compte Flooz vers un compte Tmoney ou d&apos;un compte Tmoney vers un compte Flooz.
+                    leGombo est une solution fintech permettant de gérer vos transactions internationales comme nationales via les cartes virtuelles et les transactions Tmoney - Flooz.
                     </p>
                 </div>
                 <div>
