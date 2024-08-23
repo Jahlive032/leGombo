@@ -25,10 +25,10 @@ const AccountToMobile = () =>{
                                     className=""
                                 >
                                     <div className="text-center md:text-left text-4xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-800 from-10% to-black to-60% mt-5">
-                                        <h1 className="py-3">Cartes Bancaires vers Mobile Money</h1>
+                                        <h1 className="py-3">Opter pour des Transferts de Carte Bancaire vers Tmoney et Flooz</h1>
                                     </div>
                                     <div>
-                                        <p className="text-xl py-3 md:text-left text-center">Vous avez un accès total à vos fonds, vous pouvez décider de l&apos;alimenter ou de retirer votre argent où et quand vous le voulez !</p>
+                                        <p className="text-xl py-3 md:text-left text-center"> Nos services de transfert de carte bancaire vers Mobile Money présentent de nombreux avantages :</p>
                                     </div>
 
                                     <div>
@@ -40,7 +40,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Transfert Rapide</strong> : Transferts instantanés entre Tmoney et Flooz.</span>
+                                                <span><strong>Rapidité des Transactions</strong> : Les fonds sont transférés instantanément, permettant au bénéficiaire d'utiliser l'argent sans délai.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -49,7 +49,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Accéssibilité</strong>: Processus simple et direct sans frais cachés.</span>
+                                                <span><strong>Sécurité Renforcée</strong>: Nous utilisons des protocoles de sécurité avancés pour garantir la protection de vos données et de vos transactions.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -58,7 +58,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Support Client</strong>: Disponible 24/7, permettant des transactions à tout moment.</span>
+                                                <span><strong>Accessibilité 24/7</strong>: Envoyez de l'argent à tout moment, que ce soit en journée ou en soirée, depuis le confort de votre domicile.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -67,7 +67,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Rapidité</strong>: Le bénéficiaire reçoit les fonds immédiatement sur son compte Tmoney ou Flooz.</span>
+                                                <span><strong>Pas de Frais Cachés</strong>: Profitez de frais de transfert transparents et compétitifs, sans surprises.</span>
                                             </li>
                                         </ul>
                                     </div>

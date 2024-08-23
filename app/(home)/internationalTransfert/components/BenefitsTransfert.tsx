@@ -38,10 +38,10 @@ const BenefitsTransfert = () =>{
                                     className=""
                                 >
                                     <div className="text-center md:text-left text-3xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-800 from-10% to-orange-700 to-60% mt-5">
-                                        <h1 className="py-2">Envoyez de l&apos;argent à vos proches</h1>
+                                        <h1 className="py-2">Meilleur service de Transfert d'Argent vers le Togo : Pourquoi Nous Choisir ?</h1>
                                     </div>
                                     <div className="mb-5">
-                                        <p className="text-xl md:text-left text-center">Suivez vos transferts en temps réel avec des notifications instantanées et bénéficiez d&apos;un service client dédié pour vous assister à chaque étape</p>
+                                        <p className="text-xl md:text-left text-center">Nous sommes le choix numéro un pour les transferts d'argent vers le Togo pour plusieurs raisons :</p>
                                     </div>
 
                                     <div>
@@ -53,7 +53,7 @@ const BenefitsTransfert = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Rapidité des Transferts</strong> : Recevez de l&apos;argent rapidement de l&apos;international avec des délais de transfert réduits, vous permettant de recevoir les fonds presque instantanément.</span>
+                                                <span><strong>Taux de Change Avantageux</strong> : Nous offrons les meilleurs taux de change pour maximiser le montant reçu par vos proches au Togo.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -62,7 +62,7 @@ const BenefitsTransfert = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Frais de Transfert Réduits</strong>: Profitez de frais de transfert compétitifs et transparents pour des transactions internationales abordables, sans coûts cachés.</span>
+                                                <span><strong>Sécurité Maximale</strong>: Notre plateforme utilise les technologies de sécurité les plus avancées pour protéger vos informations personnelles et vos transactions.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -71,7 +71,7 @@ const BenefitsTransfert = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Suivi en Temps Réel</strong>: Suivez vos transferts en temps réel avec des notifications instantanées, assurant une transparence totale tout au long du processus.</span>
+                                                <span><strong>Support Client 24/7</strong>: Notre équipe est disponible jour et nuit pour vous assister en cas de besoin.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -80,7 +80,7 @@ const BenefitsTransfert = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Confiance et Fiabilité</strong>: Choisissez un service de transfert international réputé pour sa fiabilité, garantissant que votre argent arrive à destination en toute sécurité.</span>
+                                                <span><strong>Options de Paiement Flexibles</strong>: Payez par carte bancaire, ou virement bancaire pour plus de commodité.</span>
                                             </li>
                                         </ul>
                                     </div>

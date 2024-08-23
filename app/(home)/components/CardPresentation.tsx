@@ -5,7 +5,7 @@ import { FaLock, FaChartPie, FaLightbulb } from "react-icons/fa"; // Importation
 import { Button } from "@/components/ui/button"; // Importation d'un composant Button personnalisé
 import { easeOut, motion } from "framer-motion"; // Importation de framer-motion pour les animations
 import Image from "next/image"; // Importation du composant Image de Next.js pour optimiser les images
-import carteBancaire from "@/public/carteBancaire.webp"; // Importation d'une image locale
+import carteBancaire from "@/public/724 - Copie.webp"; // Importation d'une image locale
 import { MiniCardHero } from "./MiniCardHero"; // Importation du composant MiniCardHero
 import { url } from "inspector";
 import check from "@/assets/check.svg"
@@ -25,14 +25,14 @@ const CardPresentation = () => {
         },
         Avantage: {
             title: "Avantages de posséder une carte de chez leGombo",
-            description: "Nos cartes virtuelles peuvent être personnalisées selon vos besoins spécifiques. Que ce soit pour des achats ponctuels, des abonnements, ou des dépenses professionnelles, vous avez un contrôle total sur les limites et les paramètres de chaque carte.",
+            description: "Nos cartes virtuelles peuvent être personnalisées selon vos besoins spécifiques. Que ce soit pour des achats ponctuels, vous avez un contrôle sur les limites et les paramètres de chaque carte.",
             descriptions: "Bénéficiez d'un service client réactif et disponible pour toute question ou assistance liée à l'utilisation de votre carte virtuelle leGombo.",
             buttonText: "Générez votre carte",
             imgSrc: "/3d-business-credit-cards-1.webp",
         },
         Tarification: {
             title: "Tarification transparente et compétitive",
-            description: "Bénéficiez de frais de transaction parmi les plus bas du marché, vous permettant d'économiser sur chaque achat en ligne.",
+            description: "Bénéficiez de frais de transaction parmi les plus bas du marché, vous permettant d'économiser sur chaque achat en ligne et cela peu import l'endroit.",
             descriptions: "Modifiez les limites de dépense de votre carte virtuelle sans frais additionnels, vous offrant une flexibilité totale pour gérer vos finances.",
             buttonText: "Générez votre carte",
             imgSrc: "/3d-business-credit-cards-1.webp",
@@ -51,7 +51,7 @@ const CardPresentation = () => {
 
     useEffect(() => {
         const progressTimer = setInterval(() => {
-            setProgress((prev) => prev < 100 ? prev + 100 / (5 * 10) : 0);
+            setProgress((prev) => prev < 100 ? prev + 100 / (10 * 10) : 0);
         }, 100);
         return () => clearInterval(progressTimer);
     }, [activeSection]);
@@ -102,8 +102,8 @@ const CardPresentation = () => {
                     <div className="flex-1 text-center md:text-left md:pl-12">
                         <h2 className="text-[#50c878] text-lg mb-4">{activeSection.toUpperCase()}</h2>
                         <h1 className="text-4xl font-bold text-gray-800 mb-6">{content[activeSection].title}</h1>
-                        <p className="text-gray-600 mb-8">{content[activeSection].description}</p>
-                        <p className="text-gray-600 mb-8">{content[activeSection].descriptions}</p>
+                        <p className="text-gray-600 text-left mb-8">{content[activeSection].description}</p>
+                        <p className="text-gray-600 text-left mb-8">{content[activeSection].descriptions}</p>
 
                         <div className="flex justify-between max-sm:flex-col max-sm:gap-2">
                             <button className="bg-[#50c878] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
@@ -127,7 +127,7 @@ const CardPresentation = () => {
                                     {activeSection === section && (
                                         <motion.div
                                             className="h-1 bg-[#40a160]"
-                                            style={{ width: `${progress}%` }}
+                                            // style={{ width: `${progress}%` }}
                                             initial={{ width: 0 }}
                                             animate={{ width: `${progress}%` }}
                                             transition={{ duration: 0.1, ease: "linear" }}
@@ -173,7 +173,7 @@ const CardPresentation = () => {
                     transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
                     className="w-[80%] mx-auto flex items-center justify-center"
                 >
-                    <div className="flex">
+                    <div className="flex gap-5">
                         <div className="flex max-sm:hidden md:flex-row items-center gap-5">
                             <MiniCardHero
                                 className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
