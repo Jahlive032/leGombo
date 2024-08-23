@@ -40,7 +40,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Rapidité des Transactions</strong> : Les fonds sont transférés instantanément, permettant au bénéficiaire d'utiliser l'argent sans délai.</span>
+                                                <span><strong>Rapidité des Transactions</strong> : Les fonds sont transférés instantanément, permettant au bénéficiaire d&apos;utiliser l&apos;argent sans délai.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image
@@ -58,7 +58,7 @@ const AccountToMobile = () =>{
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Accessibilité 24/7</strong>: Envoyez de l'argent à tout moment, que ce soit en journée ou en soirée, depuis le confort de votre domicile.</span>
+                                                <span><strong>Accessibilité 24/7</strong>: Envoyez de l&apos;argent à tout moment, que ce soit en journée ou en soirée, depuis le confort de votre domicile.</span>
                                             </li>
                                             <li className="flex space-x-3 ">
                                                 <Image

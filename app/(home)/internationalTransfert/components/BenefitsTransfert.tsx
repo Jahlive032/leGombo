@@ -38,10 +38,10 @@ const BenefitsTransfert = () =>{
                                     className=""
                                 >
                                     <div className="text-center md:text-left text-3xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-800 from-10% to-orange-700 to-60% mt-5">
-                                        <h1 className="py-2">Meilleur service de Transfert d'Argent vers le Togo : Pourquoi Nous Choisir ?</h1>
+                                        <h1 className="py-2">Meilleur service de Transfert d&apos;Argent vers le Togo : Pourquoi Nous Choisir ?</h1>
                                     </div>
                                     <div className="mb-5">
-                                        <p className="text-xl md:text-left text-center">Nous sommes le choix numéro un pour les transferts d'argent vers le Togo pour plusieurs raisons :</p>
+                                        <p className="text-xl md:text-left text-center">Nous sommes le choix numéro un pour les transferts d&apos;argent vers le Togo pour plusieurs raisons :</p>
                                     </div>
 
                                     <div>
