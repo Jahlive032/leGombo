@@ -17,7 +17,7 @@ const CardPresentation = () => {
 
     const content = {
         Utilité: {
-            title: "Utilité de posséder une carte virtuelle",
+            title: "Utilité de posséder une carte virtuelle ",
             description: "Contrairement aux cartes physiques, les cartes virtuelles peuvent être générées et utilisées instantanément, parfait pour des besoins immédiats.",
             descriptions: "En utilisant une carte virtuelle, vos informations personnelles et bancaires ne sont jamais partagées directement avec les marchands.",
             buttonText: "Générez votre carte",
