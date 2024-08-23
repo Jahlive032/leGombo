@@ -166,25 +166,62 @@ const CardPresentation = () => {
                         </div>
                     </nav>
                 </footer>
-                <motion.div 
+                 {/* Section additionnelle avec des MiniCards et une image */}
+                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-                    className="w-[80%] mx-auto mt-10"
+                    transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
+                    className="w-[80%] mx-auto flex items-center justify-center"
                 >
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {miniCards.map((card, index) => (
-                            <MiniCardHero key={index} url={card.url} />
-                        ))}
-                    </div>
-                    <div id="card" className="mt-10">
-                        <Image
-                            src={carteBancaire}
-                            alt="Carte bancaire"
-                            layout="responsive"
-                            width={500}
-                            height={300}
-                        />
+                    <div className="flex">
+                        <div className="flex max-sm:hidden md:flex-row items-center gap-5">
+                            <MiniCardHero
+                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                title=""
+                                url="/leGombo (1).png"
+                            />
+
+                            <MiniCardHero
+                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                title=""
+                                url="/leGombo (1).png"
+                            /> 
+
+                            <MiniCardHero
+                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                title=""
+                                url="/leGombo (1).png"
+                            />    
+
+                            <MiniCardHero
+                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                title=""
+                                url="/leGombo (1).png"
+                            /> 
+
+                            <MiniCardHero
+                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
+                                title=""
+                                url="/leGombo (2).png"
+                            />                
+                        </div>
+                        <motion.div
+                            id="card"
+                            initial={{ scale: 0.5, opacity: 0}}
+                            whileInView={ { scale: 1, opacity: 1 } }
+                            transition={{ duration: 0.8, ease: easeOut}}
+                        >
+                            {/* Affichage de l'image principale */}
+                            <motion.img
+                                initial={{ opacity: 0, x: 1000 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
+                                src={carteBancaire.src}
+                                alt="carte bancaire"
+                                width={500}
+                                height={500}
+                            />
+                        </motion.div>
                     </div>
                 </motion.div>
             </motion.div>
