@@ -32,7 +32,7 @@ const PhoneCardAnimation: React.FC = () => {
     }, []);
 
     const cardSpring = useSpring({
-      transform: `translateY(${scrollY}px) scale(${1 - scrollY / 2000}) rotate(${scrollY / 10}deg)`,
+      transform: `translateY(${scrollY}px) scale(${1 - scrollY / 3000}) rotate(${scrollY / 10}deg)`,
     });
 
     return (
