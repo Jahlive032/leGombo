@@ -11,7 +11,7 @@ import Spline from '@splinetool/react-spline/next';
 const BenefitsCard = () =>{
 
     return(
-        <section>
+        <section className="bg-slate-300">
             <div>
                 <div className=" ">
                     <div className="container">
@@ -24,9 +24,12 @@ const BenefitsCard = () =>{
                                     className=""
                                 >
                                     {/* <iframe src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY" className='w-full h-[550px] rounded-lg'></iframe> */}
-                                    <Spline
+                                    {/* <Spline
                                         scene="https://prod.spline.design/DpD2VJDL5aIOTtRb/scene.splinecode" 
-                                    />
+                                    /> */}
+                                     <Spline
+                                        scene="https://prod.spline.design/hFmJlq7Vd3407Fh0/scene.splinecode" 
+      />
                                 </motion.div>
                             </div>
 

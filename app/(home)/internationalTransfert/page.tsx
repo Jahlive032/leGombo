@@ -1,10 +1,10 @@
 "use client"
 
 import BenefitsTransfert from "./components/BenefitsTransfert";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "@/components/Header";
 import HeroSection from "./components/HeroSection";
 import Utilities from "./components/Utilities";
+import Footer from "@/components/Footer";
 
 const Page = () =>{
 

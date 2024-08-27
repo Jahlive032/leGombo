@@ -5,6 +5,7 @@ import Image from "next/image";
 import check from "@/public/check.svg"
 import Spline from '@splinetool/react-spline/next';
 import { Button } from "@/components/ui/button";
+import image1 from "@/public/pexels-gabby-k-7412074.jpg"
 
 
 const BenefitsTransfert = () =>{
@@ -24,8 +25,12 @@ const BenefitsTransfert = () =>{
                                     className=""
                                 >
                                     {/* <iframe src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY" className='w-full h-[550px] rounded-lg'></iframe> */}
-                                    <Spline
+                                    {/* <Spline
                                         scene="https://prod.spline.design/DpD2VJDL5aIOTtRb/scene.splinecode" 
+                                    /> */}
+                                    <Image
+                                        src={image1}
+                                        alt="image transfert"
                                     />
                                 </motion.div>
                             </div>

@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 import AccountToMobile from "./components/AccountToMobile";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import HeroSection from "./components/HeroSection";
 import TmoneyFloozSection from "./components/TmoneyFloozSection";
 

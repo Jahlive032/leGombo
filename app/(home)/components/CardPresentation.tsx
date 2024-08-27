@@ -21,21 +21,21 @@ const CardPresentation = () => {
             description: "Contrairement aux cartes physiques, les cartes virtuelles peuvent être générées et utilisées instantanément, parfait pour des besoins immédiats.",
             descriptions: "En utilisant une carte virtuelle, vos informations personnelles et bancaires ne sont jamais partagées directement avec les marchands.",
             buttonText: "Générez votre carte",
-            imgSrc: "/props-black-credit-card.webp",
+            imgSrc: "/pexels-pavel-danilyuk-6612717.webp",
         },
         Avantage: {
             title: "Avantages de posséder une carte de chez leGombo",
             description: "Nos cartes virtuelles peuvent être personnalisées selon vos besoins spécifiques. Que ce soit pour des achats ponctuels, vous avez un contrôle sur les limites et les paramètres de chaque carte.",
             descriptions: "Bénéficiez d'un service client réactif et disponible pour toute question ou assistance liée à l'utilisation de votre carte virtuelle leGombo.",
             buttonText: "Générez votre carte",
-            imgSrc: "/3d-business-credit-cards-1.webp",
+            imgSrc: "/pexels-olly-3820676.webp",
         },
         Tarification: {
             title: "Tarification transparente et compétitive",
             description: "Bénéficiez de frais de transaction parmi les plus bas du marché, vous permettant d'économiser sur chaque achat en ligne et cela peu import l'endroit.",
             descriptions: "Modifiez les limites de dépense de votre carte virtuelle sans frais additionnels, vous offrant une flexibilité totale pour gérer vos finances.",
             buttonText: "Générez votre carte",
-            imgSrc: "/3d-business-credit-cards-1.webp",
+            imgSrc: "/pexels-ketut-subiyanto-4559704.webp",
         }
     };
 
@@ -89,11 +89,11 @@ const CardPresentation = () => {
                 className="z-30 relative py-20 max-md:flex-col-reverse"
             >
                 <div className="flex flex-col w-[80%] mx-auto md:flex-row items-center justify-between bg-white rounded-lg p-8">
-                    <div className="flex-1 mb-8 md:mb-0">
+                    <div className="flex-1 mb-8 md:mb-0 ">
                         <Image
                             src={content[activeSection].imgSrc}
                             alt={content[activeSection].title}
-                            className="w-full h-auto object-contain"
+                            className="w-full h-auto object-contain rounded-md"
                             width={500}
                             height={300}
                         />

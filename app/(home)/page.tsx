@@ -1,14 +1,14 @@
 "use client"
 
 import Image from "next/image";
-import Header from "./components/Header";
+import Header from "@/components/Header";
 import HeroSection from "./components/HeroSection";
 import CardPersentation from "./components/CardPresentation";
 import ServicePresentation from "./components/ServicePresentation";
 import { Testimonials } from "./components/Testimonials";
 import FoireAuxQuestions from "./components/FoireAuxQuestions";
 import ActionSection from "./components/ActionSection";
-import Footer from "./components/Footer";
+import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import logo from "@/public/logo4.png"
