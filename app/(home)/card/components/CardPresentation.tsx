@@ -29,9 +29,10 @@ export default function CardPersentation() {
                 </div>
                 
                 <div className="mt-20 ml-[200px] max-md:hidden md:mt-0 md:flex-1 absolute py-10">
-                    <Spline
-                        scene="https://prod.spline.design/RxythoL58-e124yb/scene.splinecode" 
-                    />  
+
+                <Spline
+        scene="https://prod.spline.design/wMIIWwjHwIS36F5O/scene.splinecode" 
+      />
                 </div>
             </div>
             
