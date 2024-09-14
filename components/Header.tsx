@@ -282,8 +282,12 @@ const Header = () =>{
           </div>
               
           <div className='flex items-center gap-2'>
-            <Button variant={"outline"} className='bg-background'>S&apos;inscrire</Button>
-            <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
+            <Link href="/https://ego-frontend-next.vercel.app/register">
+              <Button variant={"outline"} className='bg-background'>S&apos;inscrire</Button>
+            </Link>
+            <Link href="/https://ego-frontend-next.vercel.app/login">
+              <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
+            </Link>
           </div>
         </div>
     </header>

@@ -10,6 +10,7 @@ import PhoneCardAnimation from "./PhoneCardAnimation";
 import { MiniCardHero } from "./MiniCardHero";
 import Image from "next/image";
 import logoAndroid from "@/assets/logo-android.svg"
+import Link from "next/link";
 
 const HeroSection = () =>{
 
@@ -126,7 +127,9 @@ Fini les galères de transferts d&apos;argent et des paiements en ligne.
                                     className="mt-7 grid gap-3 w-full sm:inline-flex items-center justify-center md:justify-start cursor-pointer"
                                 >
                                     <div className="sm:flex items-center">
-                                        <a href="#">
+                                        <Link
+                                            href="/https://ego-frontend-next.vercel.app/install"
+                                        >
                                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                                 <Image
                                                     src={logoAndroid}
@@ -135,7 +138,7 @@ Fini les galères de transferts d&apos;argent et des paiements en ligne.
                                                 />
                                                 Télécharger l&apos;application
                                             </Button>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </motion.div>
