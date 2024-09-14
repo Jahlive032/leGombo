@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import logo from "@/public/logo4.png"
+import NewSection from "./components/NewSection";
 
 export default function Home() {
 
@@ -66,10 +67,10 @@ export default function Home() {
               <Header/>
               <HeroSection/>
               <CardPersentation/>
+              <NewSection/>
               <ServicePresentation/>
               <Testimonials/>
               <FoireAuxQuestions/>
-              {/* <ActionSection/> */}
               <Footer/>
             </main>
           </motion.div>

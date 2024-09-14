@@ -24,12 +24,16 @@ const BenefitsCard = () =>{
                                     className=""
                                 >
                                     {/* <iframe src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY" className='w-full h-[550px] rounded-lg'></iframe> */}
-                                    <Spline
+                                    {/* <Spline
                                         scene="https://prod.spline.design/DpD2VJDL5aIOTtRb/scene.splinecode" 
-                                    />
+                                    /> */}
                                      {/* <Spline
                                         scene="https://prod.spline.design/hFmJlq7Vd3407Fh0/scene.splinecode" 
-      /> */}
+                                    /> */}
+
+                                    <Spline
+                                            scene="https://prod.spline.design/eC1qYXZV2FI9-t3Z/scene.splinecode" 
+                                        />
                                 </motion.div>
                             </div>
 

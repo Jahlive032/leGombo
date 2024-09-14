@@ -99,18 +99,26 @@ const HeroSection = () =>{
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
-                                    className=" mb-4 font-extrabold tracking-tight leading-none text-6xl xl:text-7xl text-[#50c878]"
+                                    className=" mb-4 font-extrabold tracking-tight leading-none text-6xl xl:text-4xl text-[#50c878]"
                                 >
-                                    leGombo
-                                </motion.h1>
+                                    Bienvenue chez leGombo !
+</motion.h1>
+                                <motion.h3
+                                    initial={{ opacity: 0, y: 50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                    className="mt-3 text-2xl text-muted-foreground text-black"
+                                >
+Fini les galères de transferts d&apos;argent et des paiements en ligne.                               
+</motion.h3>
+
                                 <motion.h3
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
                                     className="mt-3 text-xl text-muted-foreground text-black"
                                 >
-                                    Bienvenue sur leGombo, une plateforme de transfert d&apos;argent sécurisée et conviviale. Transférez de l&apos;argent d&apos;un compte Flooz vers un compte Tmoney ou d&apos;un compte Tmoney vers un compte Flooz.
-                                </motion.h3>
+                                    Simple, rapide et sécurisé - c&apos;est la nouvelle façon de gérer ton argent.                                </motion.h3>
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}

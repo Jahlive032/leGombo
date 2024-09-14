@@ -9,33 +9,46 @@ import carteBancaire from "@/public/724 - Copie-Récupéré1.png"; // Importatio
 import { MiniCardHero } from "./MiniCardHero"; // Importation du composant MiniCardHero
 import { url } from "inspector";
 import check from "@/assets/check.svg"
+import { BsHandThumbsUp } from "react-icons/bs";
+import { Gem, Sparkles } from "lucide-react";
+
 
 const CardPresentation = () => {
-    const sections = ["Utilité", "Avantage", "Tarification"] as const;
-    const [activeSection, setActiveSection] = useState<typeof sections[number]>("Utilité");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const sections = ["Personnalisation", "Avantage", "Tarification"] as const;
+    const [activeSection, setActiveSection] = useState<typeof sections[number]>("Personnalisation");
     const [progress, setProgress] = useState(0);
 
     const content = {
-        Utilité: {
-            title: "Utilité de posséder une carte virtuelle ",
-            description: "Contrairement aux cartes physiques, les cartes virtuelles peuvent être générées et utilisées instantanément, parfait pour des besoins immédiats.",
-            descriptions: "En utilisant une carte virtuelle, vos informations personnelles et bancaires ne sont jamais partagées directement avec les marchands.",
+        Personnalisation: {
+            title: "Personnaliser une carte virtuelle ",
+            description1: "✅ Personnalisez selon vos gouts et selon vos besoins",
+            description2: "✅ Créez et gardez le contrôle sur les transactions de vos enfants",
+            description3: "✅ Obtenez une carte pour vos enfants et pour vos proches",
+            description4: "✅ Créez et gardez le contrôle sur les transactions de vos enfants",
+
             buttonText: "Générez votre carte",
-            imgSrc: "/pexels-pavel-danilyuk-6612717.webp",
+            imgSrc: "/Metal Crypto Credit Card@5-1920x1080 (3).png",
         },
         Avantage: {
-            title: "Avantages de posséder une carte de chez leGombo",
-            description: "Nos cartes virtuelles peuvent être personnalisées selon vos besoins spécifiques. Que ce soit pour des achats ponctuels, vous avez un contrôle sur les limites et les paramètres de chaque carte.",
-            descriptions: "Bénéficiez d'un service client réactif et disponible pour toute question ou assistance liée à l'utilisation de votre carte virtuelle leGombo.",
+            title: "Avantages de posséder une carte leGombo",
+            description1: "✅ Commandez une carte en un clic",
+            description2: "✅ Plafonds de dépôts très attractifs et imbattable",
+            description3: "✅ Utilisez votre carte instantanément partout sur le net.",
+            description4: "✅ Sécurité de vos transactions",
+
             buttonText: "Générez votre carte",
-            imgSrc: "/pexels-olly-3820676.webp",
+            imgSrc: "/40shots_so.png",
         },
         Tarification: {
             title: "Tarification transparente et compétitive",
-            description: "Bénéficiez de frais de transaction parmi les plus bas du marché, vous permettant d'économiser sur chaque achat en ligne et cela peu import l'endroit.",
-            descriptions: "Modifiez les limites de dépense de votre carte virtuelle sans frais additionnels, vous offrant une flexibilité totale pour gérer vos finances.",
+            description1: "✅ ZÉRO frais de gestion",
+            description2: "✅ ZÉRO frais pour ouverture de compte devise",
+            description3: "✅ ZÉRO frais sur les paiements",
+            description4: "✅ ZÉRO frais de consultation de solde",
+
             buttonText: "Générez votre carte",
-            imgSrc: "/pexels-ketut-subiyanto-4559704.webp",
+            imgSrc: "/629shots_so.png",
         }
     };
 
@@ -47,7 +60,7 @@ const CardPresentation = () => {
         }, 10000);
 
         return () => clearTimeout(timer);
-    }, [activeSection]);
+    }, [activeSection, sections]);
 
     useEffect(() => {
         const progressTimer = setInterval(() => {
@@ -91,7 +104,7 @@ const CardPresentation = () => {
                 <div className="flex flex-col w-[80%] mx-auto md:flex-row items-center justify-between bg-white rounded-lg p-8">
                     <div className="flex-1 mb-8 md:mb-0 ">
                         <Image
-                            src={content[activeSection].imgSrc}
+                            src={content[activeSection].imgSrc || ''}
                             alt={content[activeSection].title}
                             className="w-full h-auto object-contain rounded-md"
                             width={500}
@@ -100,12 +113,14 @@ const CardPresentation = () => {
                     </div>
 
                     <div className="flex-1 text-center md:text-left md:pl-12">
-                        <h2 className="text-[#50c878] text-lg mb-4">{activeSection.toUpperCase()}</h2>
+                        <h2 className="text-[#50c878] text-lg mb-4"></h2>
                         <h1 className="text-4xl font-bold text-gray-800 mb-6">{content[activeSection].title}</h1>
-                        <p className="text-gray-600 text-left mb-8">{content[activeSection].description}</p>
-                        <p className="text-gray-600 text-left mb-8">{content[activeSection].descriptions}</p>
+                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description1}</p>
+                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description2}</p>
+                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description3}</p>
+                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description4}</p>
 
-                        <div className="flex justify-between max-sm:flex-col max-sm:gap-2">
+                        <div className="flex justify-between max-sm:flex-col max-sm:gap-2 md:mt-6">
                             <button className="bg-[#50c878] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
                                 {content[activeSection].buttonText}
                             </button>
@@ -139,12 +154,12 @@ const CardPresentation = () => {
 
                         <div
                             className={`flex gap-2 items-center cursor-pointer pt-4 ${
-                                activeSection === "Utilité" ? "text-[#40a160]" : "text-gray-800"
+                                activeSection === "Personnalisation" ? "text-[#40a160]" : "text-gray-800"
                             }`}
-                            onClick={() => setActiveSection("Utilité")}
+                            onClick={() => setActiveSection("Personnalisation")}
                         >
-                            <FaLock className="text-2xl mb-2" />
-                            <span className="font-semibold">Utilité</span>
+                            <Sparkles className="text-2xl"/>
+                            <span className="font-semibold">Personnalisation</span>
                         </div>
                         <div
                             className={`flex gap-2 items-center cursor-pointer pt-4 ${
@@ -152,7 +167,7 @@ const CardPresentation = () => {
                             }`}
                             onClick={() => setActiveSection("Avantage")}
                         >
-                            <FaChartPie className="text-2xl mb-2" />
+                            <BsHandThumbsUp className="text-2xl"/>
                             <span className="font-semibold">Avantage</span>
                         </div>
                         <div
@@ -161,13 +176,13 @@ const CardPresentation = () => {
                             }`}
                             onClick={() => setActiveSection("Tarification")}
                         >
-                            <FaLightbulb className="text-2xl mb-2" />
+                            <Gem className="text-2xl"/>
                             <span className="font-semibold">Tarification</span>
                         </div>
                     </nav>
                 </footer>
                  {/* Section additionnelle avec des MiniCards et une image */}
-                 <motion.div 
+                {/* <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
@@ -211,7 +226,6 @@ const CardPresentation = () => {
                             whileInView={ { scale: 1, opacity: 1 } }
                             transition={{ duration: 0.8, ease: easeOut}}
                         >
-                            {/* Affichage de l'image principale */}
                             <motion.img
                                 initial={{ opacity: 0, x: 1000 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -223,7 +237,7 @@ const CardPresentation = () => {
                             />
                         </motion.div>
                     </div>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </section>
     );

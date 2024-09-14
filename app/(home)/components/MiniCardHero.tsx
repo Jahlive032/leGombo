@@ -15,7 +15,7 @@ export const MiniCardHero = ({url, title, description,className}: {url: string, 
     }}
     className={clsx(className,'w-20 h-20 border-[0.5px] backdrop-blur-sm bg-black/10  p-4 flex flex-col items-center justify-center')}>
         <div className='w-full h-full relative p-2'>
-            <img src={url} alt={title} className='w-full h-full object-contain rounded-full' />
+            <img src={url} alt={title} description={description} className='w-full h-full object-contain rounded-full' />
         </div>
     </motion.div>
   )
