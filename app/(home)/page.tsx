@@ -15,7 +15,7 @@ export default function Home() {
       <Header/>
       <HeroSection/>
       <CardPersentation/>
-      <ServicePresentation/>
+      {/* <ServicePresentation/> */}
       <Testimonials/>
       <FoireAuxQuestions/>
       {/* <ActionSection/> */}
