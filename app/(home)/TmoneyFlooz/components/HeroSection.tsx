@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import image5 from "@/assets/User2.png"
 import Spline from '@splinetool/react-spline/next';
+import Link from "next/link";
 
 
 
@@ -27,9 +28,11 @@ const HeroSection = () =>{
                             Envoyer de l&apos;argent à votre famille, à des amis, ou régler des transactions commerciales
                         </p>
                         <div className="mt-[30px] flex items-center justify-center text-center md:justify-start">
+                            <Link href="https://ego-frontend-next.vercel.app/register">
                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                Faîtes votre première transaction
                             </Button>
+                            </Link>
                         </div>
                     </motion.div>
 

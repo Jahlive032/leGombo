@@ -46,12 +46,6 @@ const FoireAuxQuestions = () =>{
               </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-6">
-            <AccordionTrigger>Quels sont les frais associés à vos services de cartes virtuelles et de transferts d&apos;argent ?</AccordionTrigger>
-              <AccordionContent>
-                Pour le faire, connectez-vous à votre compte, choisissez l&apos;option &apos;&apos;Transfert Tmoney vers Flooz&apos;&apos; ou &apos;&apos;Transfert Flooz vers Tmoney&apos;&apos;, entrez le montant et les informations du destinataire, puis confirmez la transaction. Les fonds seront transférés instantanément.
-              </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-7">
             <AccordionTrigger>Puis-je utiliser vos services depuis n&apos;importe quel pays ?</AccordionTrigger>
               <AccordionContent>
                 Oui, nos services de création de cartes virtuelles et de transfert d&apos;argent international sont accessibles depuis la plupart des pays. Assurez-vous simplement que votre pays de résidence figure parmi les options disponibles lors de l&apos;inscription.
