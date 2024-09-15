@@ -128,7 +128,7 @@ Fini les galères de transferts d&apos;argent et des paiements en ligne.
                                 >
                                     <div className="sm:flex items-center">
                                         <Link
-                                            href="/https://ego-frontend-next.vercel.app/install"
+                                            href="https://ego-frontend-next.vercel.app/install"
                                         >
                                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                                 <Image

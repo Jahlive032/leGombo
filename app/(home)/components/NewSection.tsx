@@ -8,6 +8,7 @@ import { Cloud, renderSimpleIcon } from 'react-icon-cloud'
 import { siVisa, siMastercard, siNetflix, siFacebook, siPaypal, siGoogle, siShopify, siStripe, siTiktok, siAmazon, siAlibabacloud, siPlaystation, siGoogleplay } from 'simple-icons'
 import { ArrowUpRight, HelpCircle, Search } from "lucide-react";
 import LogoTicker from "./LogoTicker";
+import Link from "next/link";
 
 
 const icons = [ siVisa, siMastercard, siNetflix, siFacebook, siPaypal, siGoogle, siShopify, siStripe, siTiktok, siAmazon, siAlibabacloud, siPlaystation, siGoogleplay].map((icon) => {
@@ -107,9 +108,11 @@ export default function NewSection() {
       Créez des Cartes VISA et Mastercard Illimitées pour Vos Paiements en Ligne
       </p>
       <div className="flex space-x-4">
+        <Link href="https://ego-frontend-next.vercel.app/register">
         <button className="bg-black text-white px-6 py-3 rounded-full font-semibold">
           Créez un compte
         </button>
+        </Link>
         {/* <button className="flex items-center space-x-2 px-6 py-3 rounded-full border border-black font-semibold">
           <span>Get a demo</span>
           <ArrowUpRight className="w-5 h-5" />
@@ -123,9 +126,12 @@ export default function NewSection() {
         <div className="flex justify-between items-center mb-8">
             <p>leGombo</p>
           {/* <Image src="/growup-logo-white.png" alt="Growup Logo" width={100} height={30} /> */}
+          
+          <Link href="https://ego-frontend-next.vercel.app/register">
           <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
             <span className="mr-1">+</span> Générez votre carte
           </button>
+          </Link>
         </div>
         <div className="mb-8">
           <span className="text-sm text-gray-400">Balance</span>
