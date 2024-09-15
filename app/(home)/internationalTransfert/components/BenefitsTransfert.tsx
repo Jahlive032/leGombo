@@ -6,6 +6,7 @@ import check from "@/public/check.svg"
 import Spline from '@splinetool/react-spline/next';
 import { Button } from "@/components/ui/button";
 import image1 from "@/public/pexels-gabby-k-7412074.jpg"
+import Link from "next/link";
 
 
 const BenefitsTransfert = () =>{
@@ -93,9 +94,11 @@ const BenefitsTransfert = () =>{
                                     
 
                                     <div className="mt-[30px] md:text-left text-center">
+                                        <Link href="https://ego-frontend-next.vercel.app/register">
                                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                             Transférez maintenant
                                         </Button>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </div>

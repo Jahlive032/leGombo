@@ -71,13 +71,10 @@ const Footer = () => {
       <hr className="border-white w-[90%] mx-auto my-4" />
 
       <div className="flex flex-col items-center justify-center w-[90%] mx-auto mt-10">
-        <p className="text-white mb-4 text-center">
+        <p className="text-white mb-4">
           <strong>Avertissement:</strong> leGombo n&apos;est pas une banque, nous ne sommes pas non plus émetteur de monnaie électronique et nous ne détenons pas non plus les fonds des déposants.
-        </p>
-        <p className="text-white mb-4 text-center">
+        
           leGombo agit uniquement en tant que Fintech facilitant l&apos;accès aux offres en partenariat avec des émetteurs agréés dans leurs juridictions respectives. Nous n&apos;exerçons pas d&apos;activités bancaires et ne fournissons pas de services bancaires traditionnels.
-        </p>
-        <p className="text-white mb-4 text-center">
           Vous reconnaissez et acceptez que leGombo n&apos;est pas une banque et que toutes les transactions ou services financiers sont réalisés par des partenaires tiers en utilisant la plateforme leGombo et ses services associés.
         </p>
       </div>

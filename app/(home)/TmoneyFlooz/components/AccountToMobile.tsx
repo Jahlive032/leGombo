@@ -6,6 +6,7 @@ import image1 from "@/assets/man with phone.png"
 import Image from "next/image";
 import check from "@/public/check.svg"
 import { AnimatedListDemo } from "./AnimatedListDemo";
+import Link from "next/link";
 
 
 const AccountToMobile = () =>{
@@ -73,9 +74,11 @@ const AccountToMobile = () =>{
                                     </div>
 
                                     <div className="mt-[30px] md:text-left text-center">
+                                        <Link href="https://ego-frontend-next.vercel.app/register">
                                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                             Transférer maintenant
                                         </Button>
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </div>

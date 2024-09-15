@@ -11,6 +11,7 @@ import { url } from "inspector";
 import check from "@/assets/check.svg"
 import { BsHandThumbsUp } from "react-icons/bs";
 import { Gem, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 
 const CardPresentation = () => {
@@ -94,15 +95,15 @@ const CardPresentation = () => {
     }, []);
 
     return (
-        <section className="py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
+        <section className="py-10 mt-36 md:mt-0 md:py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-                className="z-30 relative py-20 max-md:flex-col-reverse"
+                className="z-30 relative py-10 md:py-20 max-md:flex-col-reverse"
             >
-                <div className="flex flex-col w-[80%] mx-auto md:flex-row items-center justify-between bg-white rounded-lg p-8">
-                    <div className="flex-1 mb-8 md:mb-0 ">
+                <div className="flex flex-col w-[90%] md:w-[80%] mx-auto md:flex-row items-center justify-between bg-white rounded-lg p-4 md:p-8">
+                    <div className="flex-1 mb-8 md:mb-0 w-full md:w-auto">
                         <Image
                             src={content[activeSection].imgSrc || ''}
                             alt={content[activeSection].title}
@@ -112,26 +113,31 @@ const CardPresentation = () => {
                         />
                     </div>
 
-                    <div className="flex-1 text-center md:text-left md:pl-12">
-                        <h2 className="text-[#50c878] text-lg mb-4"></h2>
-                        <h1 className="text-4xl font-bold text-gray-800 mb-6">{content[activeSection].title}</h1>
-                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description1}</p>
-                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description2}</p>
-                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description3}</p>
-                        <p className="text-gray-600 text-left mb-2">{content[activeSection].description4}</p>
+                    <div className="flex-1 text-center md:text-left md:pl-6 lg:pl-12">
+                        <h2 className="text-[#50c878] text-base md:text-lg mb-2 md:mb-4"></h2>
+                        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 md:mb-6">{content[activeSection].title}</h1>
+                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description1}</p>
+                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description2}</p>
+                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description3}</p>
+                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description4}</p>
 
-                        <div className="flex justify-between max-sm:flex-col max-sm:gap-2 md:mt-6">
-                            <button className="bg-[#50c878] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
-                                {content[activeSection].buttonText}
-                            </button>
-                            <Button>
-                                Découvrir plus
-                            </Button>
+                        <div className="flex flex-col sm:flex-row justify-between gap-4 mt-4 md:mt-6">
+                            <Link href="https://ego-frontend-next.vercel.app/register">
+                                <button className="w-full sm:w-auto bg-[#50c878] text-white py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
+                                    {content[activeSection].buttonText}
+                                </button>
+                            </Link>
+
+                            <Link href="/card">
+                                <Button className="w-full sm:w-auto">
+                                    Découvrir plus
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
 
-                <footer className="mt-8 pt-4 w-[80%] mx-auto">
+                <footer className="mt-8 pt-4 w-[90%] md:w-[80%] mx-auto">
                     <nav className="flex justify-around relative">
                         <div className="absolute top-0 left-0 w-full flex justify-around gap-4">
                             {sections.map((section, index) => (
@@ -142,7 +148,6 @@ const CardPresentation = () => {
                                     {activeSection === section && (
                                         <motion.div
                                             className="h-1 bg-[#40a160]"
-                                            // style={{ width: `${progress}%` }}
                                             initial={{ width: 0 }}
                                             animate={{ width: `${progress}%` }}
                                             transition={{ duration: 0.1, ease: "linear" }}
@@ -152,92 +157,24 @@ const CardPresentation = () => {
                             ))}
                         </div>
 
-                        <div
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
-                                activeSection === "Personnalisation" ? "text-[#40a160]" : "text-gray-800"
-                            }`}
-                            onClick={() => setActiveSection("Personnalisation")}
-                        >
-                            <Sparkles className="text-2xl"/>
-                            <span className="font-semibold">Personnalisation</span>
-                        </div>
-                        <div
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
-                                activeSection === "Avantage" ? "text-[#40a160]" : "text-gray-800"
-                            }`}
-                            onClick={() => setActiveSection("Avantage")}
-                        >
-                            <BsHandThumbsUp className="text-2xl"/>
-                            <span className="font-semibold">Avantage</span>
-                        </div>
-                        <div
-                            className={`flex gap-2 items-center cursor-pointer pt-4 ${
-                                activeSection === "Tarification" ? "text-[#40a160]" : "text-gray-800"
-                            }`}
-                            onClick={() => setActiveSection("Tarification")}
-                        >
-                            <Gem className="text-2xl"/>
-                            <span className="font-semibold">Tarification</span>
-                        </div>
+                        {sections.map((section) => (
+                            <div
+                                key={section}
+                                className={`flex flex-col sm:flex-row gap-2 items-center cursor-pointer pt-4 ${
+                                    activeSection === section ? "text-[#40a160]" : "text-gray-800"
+                                }`}
+                                onClick={() => setActiveSection(section)}
+                            >
+                                <div className="text-2xl sm:text-xl md:text-2xl">
+                                    {section === "Personnalisation" && <Sparkles />}
+                                    {section === "Avantage" && <BsHandThumbsUp />}
+                                    {section === "Tarification" && <Gem />}
+                                </div>
+                                <span className="text-sm md:text-base font-semibold hidden sm:inline">{section}</span>
+                            </div>
+                        ))}
                     </nav>
                 </footer>
-                 {/* Section additionnelle avec des MiniCards et une image */}
-                {/* <motion.div 
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
-                    className="w-[80%] mx-auto flex items-center justify-center"
-                >
-                    <div className="flex gap-5">
-                        <div className="flex max-sm:hidden md:flex-row items-center gap-5">
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1).png"
-                            />
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1).png"
-                            /> 
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1).png"
-                            />    
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (1).png"
-                            /> 
-
-                            <MiniCardHero
-                                className="bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl border-none"
-                                title=""
-                                url="/leGombo (2).png"
-                            />                
-                        </div>
-                        <motion.div
-                            id="card"
-                            initial={{ scale: 0.5, opacity: 0}}
-                            whileInView={ { scale: 1, opacity: 1 } }
-                            transition={{ duration: 0.8, ease: easeOut}}
-                        >
-                            <motion.img
-                                initial={{ opacity: 0, x: 1000 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.5, ease: "easeInOut" }}
-                                src={carteBancaire.src}
-                                alt="carte bancaire"
-                                width={500}
-                                height={500}
-                            />
-                        </motion.div>
-                    </div>
-                </motion.div> */}
             </motion.div>
         </section>
     );

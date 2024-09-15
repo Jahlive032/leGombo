@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import check from "@/assets/check.svg";
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 interface Step {
   title: string;
@@ -111,9 +112,11 @@ const PresentationStep: React.FC<PresentationStepProps> = ({ title, description,
       )}
       {isSelected && (
         <div className="py-3 text-center md:text-left">
+          <Link href="https://ego-frontend-next.vercel.app/register">
           <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
             Ouvrez un compte
           </Button>
+          </Link>
         </div>
       )}
     </motion.div>

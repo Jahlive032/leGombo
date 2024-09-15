@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
+import Link from "next/link";
 
 const pricingTiers = [
     {
@@ -106,9 +107,11 @@ const TarifCard = () =>{
                                             {price} FCFA
                                         </span>
                                     </div>
+                                    <Link href="https://ego-frontend-next.vercel.app/register">
                                     <button className={twMerge("btn bg-[#50c878] py-2 rounded-md text-white w-full mt-[30px]", inverse === true && 'bg-black text-white')}>
                                         {buttonText}
                                     </button>
+                                    </Link>
                                     <ul className="flex flex-col gap-5 mt-8">
                                         {features.map((feature, index) =>(
                                             <li key={index} className="text-sm flex items-center gap-4">
