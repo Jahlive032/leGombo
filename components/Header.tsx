@@ -202,7 +202,7 @@ const Header = () =>{
                       <ul className="space-y-4">
                         <li className="flex items-center gap-2">
                           <Image
-                            src="/Pink_Icon_-_Cards.svg"
+                            src="/icons/virtual-card-icon.svg"
                             alt="Image 1"
                             width={40}
                             height={40}
@@ -216,7 +216,7 @@ const Header = () =>{
                         </li>
                         <li className="flex items-center gap-2">
                           <Image
-                            src="/Orange_Icon_-_Global.svg"
+                            src="/icons/globe-icon.svg"
                             alt="Image 3"
                             width={40}
                             height={40}
@@ -230,7 +230,7 @@ const Header = () =>{
                         </li>
                         <li className="flex items-center gap-2">
                           <Image
-                            src="/Orange_Icon_-_Convert.svg"
+                            src="/icons/transfer-icon.svg"
                             alt="Image 3"
                             width={40}
                             height={40}
@@ -247,7 +247,7 @@ const Header = () =>{
                       
                         <li className="flex items-center gap-2">
                           <Image
-                            src="/Orange_Icon_-_Convert.svg"
+                            src="/icons/transfer-icon.svg"
                             alt="Image 3"
                             width={40}
                             height={40}
@@ -282,10 +282,10 @@ const Header = () =>{
           </div>
               
           <div className='flex items-center gap-2'>
-            <Link href="/https://ego-frontend-next.vercel.app/register">
+            <Link href="https://ego-frontend-next.vercel.app/register">
               <Button variant={"outline"} className='bg-background'>S&apos;inscrire</Button>
             </Link>
-            <Link href="/https://ego-frontend-next.vercel.app/login">
+            <Link href="https://ego-frontend-next.vercel.app/login">
               <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
             </Link>
           </div>
