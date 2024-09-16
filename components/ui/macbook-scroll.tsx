@@ -124,7 +124,8 @@ export const badge = ({ className }: { className?: string }) =>{
 
   return(
     <div>
-      <img className={className} src="/logo.png" alt="logo image" />
+      <Image className={className} src="/logo4.png" alt="logo image" width={100} height={100} />
+      {/* <img className={className} src="/logo4.png" alt="logo image" /> */}
     </div>
   )
 }

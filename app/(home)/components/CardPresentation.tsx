@@ -49,7 +49,7 @@ const CardPresentation = () => {
             description4: "✅ ZÉRO frais de consultation de solde",
 
             buttonText: "Générez votre carte",
-            imgSrc: "/629shots_so.png ",
+            imgSrc: "/629shots_so.png",
         }
     };
 
