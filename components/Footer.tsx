@@ -55,15 +55,15 @@ const Footer = () => {
               <span>Togo</span>
             </a>
 
-            {/* <a href="#" className="flex items-center justify-center md:justify-start gap-2">
+            <a href="#" className="flex items-center justify-center md:justify-start gap-2">
               <Image
-                src="/flag_civ_icon.svg"
-                alt="logo Côte d'Ivoire"
+                src="/icons8-nigeria-circular-96.png"
+                alt="logo Nigeria"
                 width={20}
                 height={20}
               />
-              <span>Côte d&apos;Ivoire</span>
-            </a> */}
+              <span>Nigeria</span>
+            </a>
           </ul>
         </div>
       </div>
