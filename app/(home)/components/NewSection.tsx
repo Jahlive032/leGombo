@@ -50,7 +50,7 @@ export default function NewSection() {
     <div className="md:w-1/2">
   <div className="bg-black text-white rounded-3xl p-6 max-w-md mx-auto relative overflow-hidden card-glow">
     
-    {/* <div className="shine"></div> */}
+    <div className="shine"></div>
     
     <div className="flex justify-between items-center mb-8 z-10 relative">
       <p>leGombo</p>          
