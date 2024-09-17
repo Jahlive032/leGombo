@@ -42,7 +42,7 @@ export const MacbookScroll = ({
     offset: ["start start", "end start"],
   });
 
-  const captureString = require('@/assets/capture.png') as string;
+  const captureString = require('@/assets/capture1.png') as string;
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -659,7 +659,7 @@ export const OptionKey = ({ className }: { className: string }) => {
 const AceternityLogo = () => {
   return (
     <Image
-      src={"/logo3.png"}
+      src={"/logo4.png"}
       alt=""
       width={32}
       height={32}

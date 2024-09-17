@@ -10,18 +10,6 @@ import { ArrowUpRight, HelpCircle, Search } from "lucide-react";
 import LogoTicker from "./LogoTicker";
 import Link from "next/link";
 
-
-const icons = [ siVisa, siMastercard, siNetflix, siFacebook, siPaypal, siGoogle, siShopify, siStripe, siTiktok, siAmazon, siAlibabacloud, siPlaystation, siGoogleplay].map((icon) => {
-
-    return renderSimpleIcon({
-      icon,
-      size: 60,
-      aProps: {
-        onClick: (e: any) => e.preventDefault()
-      }
-    })
-  })
-
 export default function NewSection() {
 
     return (
@@ -94,8 +82,6 @@ export default function NewSection() {
 {/* Main content */}
 <div className="relative z-10">
   {/* Navigation */}
-  
-
   {/* Hero section */}
   <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center">
     {/* Left column */}
@@ -122,33 +108,37 @@ export default function NewSection() {
 
     {/* Right column */}
     <div className="md:w-1/2">
-      <div className="bg-black text-white rounded-3xl p-6 max-w-md mx-auto">
-        <div className="flex justify-between items-center mb-8">
-            <p>leGombo</p>
-          {/* <Image src="/growup-logo-white.png" alt="Growup Logo" width={100} height={30} /> */}
-          
-          <Link href="https://ego-frontend-next.vercel.app/register">
-          <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-            <span className="mr-1">+</span> Générez votre carte
-          </button>
-          </Link>
-        </div>
-        <div className="mb-8">
-          <span className="text-sm text-gray-400">Balance</span>
-          <h2 className="text-3xl font-bold">$32,000.00</h2>
-        </div>
-        <div className="flex justify-between items-end">
-          <div>
-            <span className="text-sm text-gray-400">**** **** 1406 1805</span>
-            <p>KODJO HERMANN</p>
-          </div>
-          <div className="text-right">
-            <span className="text-sm text-gray-400">Expire le</span>
-            <p>10/26</p>
-          </div>
-        </div>
+  <div className="bg-black text-white rounded-3xl p-6 max-w-md mx-auto relative overflow-hidden card-glow">
+    
+    <div className="shine"></div>
+    
+    <div className="flex justify-between items-center mb-8 z-10 relative">
+      <p>leGombo</p>          
+      <Link href="https://ego-frontend-next.vercel.app/register">
+        <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+          <span className="mr-1">+</span> Générez votre carte
+        </button>
+      </Link>
+    </div>
+
+    <div className="mb-8 z-10 relative">
+      <span className="text-sm text-gray-400">Balance</span>
+      <h2 className="text-3xl font-bold">$32,000.00</h2>
+    </div>
+
+    <div className="flex justify-between items-end z-10 relative">
+      <div>
+        <span className="text-sm text-gray-400">**** **** 1406 1805</span>
+        <p>KODJO HERMANN</p>
+      </div>
+      <div className="text-right">
+        <span className="text-sm text-gray-400">Expire le</span>
+        <p>10/26</p>
       </div>
     </div>
+  </div>
+</div>
+
   </div>
 
   <LogoTicker/>
