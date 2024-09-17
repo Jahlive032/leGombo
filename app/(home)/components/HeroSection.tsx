@@ -100,7 +100,7 @@ const HeroSection = () =>{
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
-                                    className=" mb-4 font-extrabold tracking-tight leading-none text-6xl xl:text-4xl text-[#50c878]"
+                                    className=" mb-4 font-extrabold tracking-tight text-center md:text-left leading-none text-4xl xl:text-4xl text-[#50c878]"
                                 >
                                     Bienvenue chez leGombo !
 </motion.h1>
@@ -108,16 +108,16 @@ const HeroSection = () =>{
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
-                                    className="mt-3 text-2xl text-muted-foreground text-black"
+                                    className="mt-3 text-2xl text-center md:text-left text-muted-foreground text-black"
                                 >
-Fini les galères de transferts d&apos;argent et des paiements en ligne.                               
-</motion.h3>
+                                    Fini les galères de transferts d&apos;argent et des paiements en ligne.                               
+                                </motion.h3>
 
                                 <motion.h3
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.5 }}
-                                    className="mt-3 text-xl text-muted-foreground text-black"
+                                    className="mt-3 text-xl text-center md:text-left text-muted-foreground text-black"
                                 >
                                     Simple, rapide et sécurisé - c&apos;est la nouvelle façon de gérer ton argent.                                </motion.h3>
                                 <motion.div
@@ -149,11 +149,11 @@ Fini les galères de transferts d&apos;argent et des paiements en ligne.
                                 </div>
 
                                 <div className="relative">
-                                    <MiniCardHero className="absolute top-[100px] -right-[50px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/Mastercard-Logo.png" title="mastercard logo"/>
+                                    <MiniCardHero className="absolute top-[100px]  -right-[50px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/Mastercard-Logo.png" title="mastercard logo"/>
                                 </div>
 
                                 <div className="relative">
-                                    <MiniCardHero className="absolute bottom-[200px] right-[290px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/visa.png" title="visa logo" />
+                                    <MiniCardHero className="absolute bottom-[200px] right-[230px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/visa.png" title="visa logo" />
                                 </div>
                             </div>
                         </div>
