@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Banner from "./Banner";
 import Image from "next/image";
 import { MiniCardHero } from "./MiniCardHero";
 import { Card } from "./Card";
@@ -14,60 +13,6 @@ export default function NewSection() {
 
     return (
         <>
-        {/* <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-        >
-            <div className=" w-full py-20">
-            <div className="flex justify-center flex-1 items-center mx-auto w-[80%]">
-                <div className="flex justify-center flex-col items-center mb-20 w-[50%]">
-                    <div className="p-10 rounded-lg">
-                        <h1 className="text-2xl font-bold">Créez des Cartes VISA et Mastercard Illimitées pour Vos Paiements en Ligne</h1>
-                    </div>
-
-
-                    <div className="bg-gray-200 rounded-xl">
-                    <div className="">
-                        <Card url={"/jeu.png"} title="Jeu" description="37.000fcfa" className="absolute bottom-[200px] bg-white -rotate-12 z-40 w-40 rounded-2xl"/>
-                    </div>
-                    <div className="">
-                        <Card url={"/netflix.png"}  className="absolute bottom-[400px] bg-white -rotate-12 z-40  rounded-full"/>
-                    </div>
-                    
-                    <Image src={"/businessman-talking-phone1.png"} alt="image" width={700} height={500}/>
-                    </div>
-                </div>
-                <div>
-                <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-    >
-      <Cloud>
-    {icons}
-    <a
-      href="https://emojipedia.org/globe-showing-americas/"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        height={60}
-        width={60}
-        alt="A globe"
-        src=""
-      />
-    </a>
-  </Cloud>
-    </motion.div>
-                </div>
-            </div>
-            
-
-           
-        </div>
-        </motion.div> */}
-
 <div className=" w-[90%] mx-auto bg-gradient-to-b from-[#50c878] to-[#0a74f0] text-black relative overflow-hidden rounded-3xl mt-20">
 <div className="absolute inset-0 bg-[url('/world-map-pattern.png')] opacity-10 z-0"></div>
 
@@ -94,11 +39,11 @@ export default function NewSection() {
       Créez des Cartes VISA et Mastercard Illimitées pour Vos Paiements en Ligne
       </p>
       <div className="flex space-x-4">
-        <Link href="https://ego-frontend-next.vercel.app/register">
+        {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
         <button className="bg-black text-white px-6 py-3 rounded-full font-semibold">
           Créez un compte
         </button>
-        </Link>
+        {/* </Link> */}
         {/* <button className="flex items-center space-x-2 px-6 py-3 rounded-full border border-black font-semibold">
           <span>Get a demo</span>
           <ArrowUpRight className="w-5 h-5" />
@@ -114,11 +59,12 @@ export default function NewSection() {
     
     <div className="flex justify-between items-center mb-8 z-10 relative">
       <p>leGombo</p>          
-      <Link href="https://ego-frontend-next.vercel.app/register">
+      {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
         <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-          <span className="mr-1">+</span> Générez votre carte
+          <span className="mr-1">+</span>
+          <span className="hidden sm:inline">Générez votre carte</span> 
         </button>
-      </Link>
+      {/* </Link> */}
     </div>
 
     <div className="mb-8 z-10 relative">
