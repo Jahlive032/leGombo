@@ -95,7 +95,7 @@ const CardPresentation = () => {
     }, []);
 
     return (
-        <section className="py-10 mt-48  md:mt-0 md:py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
+        <section className="py-10 mt-48 md:mt-0 md:py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, x: 0 }}
