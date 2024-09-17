@@ -2,9 +2,6 @@
 
 import logo from "@/public/logo4.png";
 import Image from "next/image";
-import { MdLocationOn, MdEmail } from "react-icons/md";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import SubscribeForm from "./SubscribeForm";
 
 const Footer = () => {
   return (

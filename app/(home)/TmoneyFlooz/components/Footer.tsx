@@ -1,6 +1,5 @@
 import Image from "next/image";
 import logo from "@/assets/logo3.png"
-import SubscribeForm from "./SubscribeForm";
 
 const Footer = () =>{
 
@@ -40,7 +39,6 @@ const Footer = () =>{
                     </ul>
                 </div>
                 <div>
-                <SubscribeForm />
                 </div>
             </div>
         </footer>

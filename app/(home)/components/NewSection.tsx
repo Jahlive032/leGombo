@@ -43,11 +43,6 @@ export default function NewSection() {
         <button className="bg-black text-white px-6 py-3 rounded-full font-semibold">
           Créez un compte
         </button>
-        {/* </Link> */}
-        {/* <button className="flex items-center space-x-2 px-6 py-3 rounded-full border border-black font-semibold">
-          <span>Get a demo</span>
-          <ArrowUpRight className="w-5 h-5" />
-        </button> */}
       </div>
     </div>
 
@@ -55,7 +50,7 @@ export default function NewSection() {
     <div className="md:w-1/2">
   <div className="bg-black text-white rounded-3xl p-6 max-w-md mx-auto relative overflow-hidden card-glow">
     
-    <div className="shine"></div>
+    {/* <div className="shine"></div> */}
     
     <div className="flex justify-between items-center mb-8 z-10 relative">
       <p>leGombo</p>          
