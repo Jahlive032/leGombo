@@ -55,7 +55,7 @@ const Footer = () => {
               <span>Togo</span>
             </a>
 
-            <a href="#" className="flex items-center justify-center md:justify-start gap-2">
+            {/* <a href="#" className="flex items-center justify-center md:justify-start gap-2">
               <Image
                 src="/flag_civ_icon.svg"
                 alt="logo Côte d'Ivoire"
@@ -63,7 +63,7 @@ const Footer = () => {
                 height={20}
               />
               <span>Côte d&apos;Ivoire</span>
-            </a>
+            </a> */}
           </ul>
         </div>
       </div>
