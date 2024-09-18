@@ -95,7 +95,7 @@ const CardPresentation = () => {
     }, []);
 
     return (
-        <section className="py-10 mt-36 md:mt-0 md:py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
+        <section className="py-10 mt-48 md:mt-0 md:py-20 bg-gradient-to-b from-[#F0F0F0] to-[#50c878]">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -122,11 +122,11 @@ const CardPresentation = () => {
                         <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description4}</p>
 
                         <div className="flex flex-col sm:flex-row justify-between gap-4 mt-4 md:mt-6">
-                            <Link href="https://ego-frontend-next.vercel.app/register">
+                            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
                                 <button className="w-full sm:w-auto bg-[#50c878] text-white py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
                                     {content[activeSection].buttonText}
                                 </button>
-                            </Link>
+                            {/* </Link> */}
 
                             <Link href="/card">
                                 <Button className="w-full sm:w-auto">

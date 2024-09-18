@@ -105,11 +105,11 @@ const TmoneyFloozSection = () => {
                                     </div>
 
                                     <div className="mt-[30px] md:text-left text-center">
-                                        <Link href="https://ego-frontend-next.vercel.app/register">
+                                        {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
                                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                             Transférer maintenant
                                         </Button>
-                                        </Link>
+                                        {/* </Link> */}
                                     </div>
                                 </motion.div>
                             </div>

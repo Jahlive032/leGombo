@@ -28,11 +28,11 @@ const HeroSection = () =>{
                         </h1>
                         <p className="text-center text-lg">Envoyez de l&apos;argent partout dans le monde avec notre service de transfert international sécurisé.</p>
                         <div className="mt-[30px] flex justify-center items-center">
-                            <Link href="https://ego-frontend-next.vercel.app/register">
+                            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                 Ouvrez un compte professionnel
                             </Button>
-                            </Link>
+                            {/* </Link> */}
                         </div>
                     </motion.div>
 

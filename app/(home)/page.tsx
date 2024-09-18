@@ -7,7 +7,6 @@ import CardPersentation from "./components/CardPresentation";
 import ServicePresentation from "./components/ServicePresentation";
 import { Testimonials } from "./components/Testimonials";
 import FoireAuxQuestions from "./components/FoireAuxQuestions";
-import ActionSection from "./components/ActionSection";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";

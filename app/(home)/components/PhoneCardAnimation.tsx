@@ -4,8 +4,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import carteBancaire from "@/public/724 - Copie-Récupéré1.png"
+import carteBancaire from "@/public/carte.png"
 import phone1 from '@/assets/eGoTransfer1 (1).webp'
+import legombophone from '@/public/691shots_so.png'
 
 const PhoneCardAnimation: React.FC = () => {
 
@@ -40,12 +41,12 @@ const PhoneCardAnimation: React.FC = () => {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div style={{ position: 'relative' }}>
             <Image
-              src={phone1}
-              width={350}
-              className='-mt-28'
+              src={legombophone}
+              width={300}
+              className='max-sm:-mt-20 -mt-28'
               alt='egoTransfer phone'
             />
-            <motion.div className='-z-10 max-sm:-ml-14'>
+            <motion.div className='-z-10 '>
               <animated.div
                 ref={cardRef}
                 style={{
@@ -56,7 +57,7 @@ const PhoneCardAnimation: React.FC = () => {
                   top: '0px',
                   ...cardSpring,
                 }}
-                className="lg:left-[15px] -right-7 max-sm:w-[80px]"
+                className="lg:-left-[10px] max-md:-left-[20px] -right-2  max-sm:w-[80px]"
               >
                 <Image
                   src={carteBancaire}
