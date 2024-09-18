@@ -46,44 +46,49 @@ export default function NewSection() {
 
                   {/* Right column */}
                   <div className="md:w-1/2 w-full">
-  <motion.div
-    animate={{
-      backgroundPositionX: "100%",
-    }}
-    transition={{
-      duration: 1,
-      repeat: Infinity,
-      ease: "linear",
-      repeatType: "loop",
-    }}
-    className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-white rounded-3xl p-6 max-w-md mx-auto relative overflow-hidden card-glow"
-  >
-    <div className="flex justify-between items-center mb-8 z-10 relative">
-      <p className="text-xl font-bold">leGombo</p>
-      <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-        <span className="mr-1">+</span>
-        <span className="hidden sm:inline">Générez votre carte</span>
-      </button>
-    </div>
+                    <div className="bg-black text-white rounded-3xl p-6 max-w-md mx-auto relative overflow-hidden card-glow">
+                      {/* <div className="shine"></div> */}
+                      
+                      <div className="flex justify-between items-center mb-8 z-10 relative">
+                      <motion.span
+                      animate={{
+                        backgroundPositionX: "100%",
+                      }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                        repeatType: "loop",
+                      }}
+                      className="text-xl bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                    >
+                      leGombo
+                    </motion.span>         
+                        {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                          <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                            <span className="mr-1">+</span>
+                            <span className="hidden sm:inline">Générez votre carte</span> 
+                          </button>
+                        {/* </Link> */}
+                      </div>
 
-    <div className="mb-8 z-10 relative">
-      <span className="text-sm text-gray-400">Balance</span>
-      <h2 className="text-3xl font-bold">$32,000.00</h2>
-    </div>
+                      <div className="mb-8 z-10 relative">
+                        <span className="text-sm text-gray-400">Balance</span>
+                        <h2 className="text-3xl font-bold">$32,000.00</h2>
+                      </div>
 
-    <div className="flex justify-between items-end z-10 relative">
-      <div>
-        <span className="text-sm text-gray-400">**** **** 1406 1805</span>
-        <p>KODJO HERMANN</p>
-      </div>
-      <div className="text-right">
-        <span className="text-sm text-gray-400">Expire le</span>
-        <p>10/26</p>
-      </div>
-    </div>
-  </motion.div>
-</div>
-
+                      <div className="flex justify-between items-end z-10 relative">
+                        <div>
+                          <span className="text-sm text-gray-400">**** **** 1406 1805</span>
+                          <p>KODJO HERMANN</p>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-sm text-gray-400">Expire le</span>
+                          <p>10/26</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
 

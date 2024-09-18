@@ -153,7 +153,7 @@ const HeroSection = () =>{
                                 </div>
 
                                 <div className="relative">
-                                    <MiniCardHero className="absolute bottom-[200px] right-[230px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/visa.png" title="visa logo" />
+                                    <MiniCardHero className="absolute bottom-[200px] right-[230px] max-md:right-[200px] bg-black/30 -rotate-12 z-40 w-32 h-32 rounded-2xl" url="/visa.png" title="visa logo" />
                                 </div>
                             </div>
                         </div>

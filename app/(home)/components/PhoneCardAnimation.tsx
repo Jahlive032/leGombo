@@ -57,7 +57,7 @@ const PhoneCardAnimation: React.FC = () => {
                   top: '0px',
                   ...cardSpring,
                 }}
-                className="lg:-left-[10px] -right-2  max-sm:w-[80px]"
+                className="lg:-left-[10px] max-md:-left-[20px] -right-2  max-sm:w-[80px]"
               >
                 <Image
                   src={carteBancaire}
