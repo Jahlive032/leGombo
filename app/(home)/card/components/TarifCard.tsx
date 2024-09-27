@@ -9,62 +9,69 @@ import Link from "next/link";
 const pricingTiers = [
     {
         index: 1,
-        title: "One Shot",
+        title: "Oneshot",
         price: 1000,
         buttonText: "Génerez votre carte",
         popular: false,
+        vip: false,
+        pack: false,
         inverse: false,
         features: [
             "Usage unique",
-            "1 an de validité",
-            "4% de frais de dépôt",
+            // "1 an de validité",
+            // "4% de frais de dépôt",
             "Type de carte accepté: Visa",
             
         ],
     },
     {
         index: 2,
-        title: "Standard",
+        title: "Basic",
         price: 2500 ,
         buttonText: "Génerez votre carte",
         popular: true,
+        vip: false,
+        pack: false,
         inverse: true,
         features: [
             "2 ans de validité",
-            "4% de frais de dépôt",
+            // "4% de frais de dépôt",
             "500 FCFA/an de frais de maintenance",
             "Type de carte accepté: Visa, Mastercard"
         ]
     },
     {
         index: 3,
-        title: "Nana Benz",
+        title: "Gold",
         price: 8500 ,
         buttonText: "Génerez votre carte",
         popular: false,
+        vip: true,
         inverse: false,
         features: [
             "2 ans de validité",
-            "4% de frais de dépôt",
+            // "4% de frais de dépôt",
             "Aucun frais de maintenance",
             "Type de carte accepté: Visa, Mastercard"
         ]
     },
-    {
-        index: 4,
-        title: "Premium",
-        price: 10000 ,
-        buttonText: "Génerez votre carte",
-        popular: false,
-        inverse: false,
-        features: [
-            "Générer jusqu'à 5 carte virtuelle",
-            "2 ans de validité",
-            "4% de frais de dépôt",
-            "500 FCFA/an de frais de maintenance",
-            "Type de carte accepté: Visa, Mastercard"
-        ]
-    }
+    // {
+    //     index: 4,
+    //     title: "Famille",
+    //     price: 10000 ,
+    //     buttonText: "Génerez votre carte",
+    //     popular: false,
+    //     vip: false,
+    //     pack: true,
+    //     inverse: false,
+    //     features: [
+    //         "Générer jusqu'à 5 carte virtuelle",
+    //         "2 ans de validité",
+    //         "4% de frais de dépôt",
+    //         "500 FCFA/an de frais de maintenance",
+    //         "Type de carte accepté: Visa, Mastercard"
+    //     ]
+    // }
 ];
 
 const TarifCard = () =>{
@@ -79,12 +86,12 @@ const TarifCard = () =>{
                         </h1>
 
                         <div className="flex flex-col md:flex-row gap-6 items-center mt-10 lg:items-end lg:justify-center h-[500px] max-md:h-auto">
-                            {pricingTiers.map(({ index, title, price, buttonText, popular, inverse, features }) =>(
-                                <div key={index} className={twMerge("card", inverse === true && 'border-black bg-[#50c878] text-white/60')}>
+                            {pricingTiers.map(({ index, title, price, buttonText, popular, vip, pack, inverse, features }) =>(
+                                <div key={index} className={twMerge("card bg-white", inverse === true && 'border-black bg-[#50c878] text-white')}>
                                     <div className="flex justify-between">
-                                        <h3 className={twMerge("text-lg font-bold text-black/50", inverse === true && "text-white/60")}>{title}</h3>
+                                        <h3 className={twMerge("text-lg font-bold text-black/50", inverse === true && "text-white")}>{title}</h3>
                                         {popular === true && (
-                                            <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
+                                            <div className="inline-flex bg-black text-sm px-4 py-1.5 rounded-xl border border-white/20">
                                                 <motion.span
                                                     animate={{
                                                         backgroundPositionX: "100%"
@@ -98,6 +105,44 @@ const TarifCard = () =>{
                                                     className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
                                                 >
                                                     Populaire
+                                                </motion.span>
+                                            </div>
+                                        )}
+
+                                        {vip === true && (
+                                            <div className="inline-flex bg-black text-sm px-4 py-1.5 rounded-xl border border-black/20">
+                                                <motion.span
+                                                    animate={{
+                                                        backgroundPositionX: "100%"
+                                                    }}
+                                                    transition={{
+                                                        duration: 1,
+                                                        repeat: Infinity,
+                                                        ease: "linear",
+                                                        repeatType: "loop"
+                                                    }}
+                                                    className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                                                >
+                                                    VIP
+                                                </motion.span>
+                                            </div>
+                                        )}
+
+                                        {pack === true && (
+                                            <div className="inline-flex text-sm px-4 bg-black py-1.5 rounded-xl border border-black/20">
+                                                <motion.span
+                                                    animate={{
+                                                        backgroundPositionX: "100%"
+                                                    }}
+                                                    transition={{
+                                                        duration: 1,
+                                                        repeat: Infinity,
+                                                        ease: "linear",
+                                                        repeatType: "loop"
+                                                    }}
+                                                    className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                                                >
+                                                    Pack
                                                 </motion.span>
                                             </div>
                                         )}

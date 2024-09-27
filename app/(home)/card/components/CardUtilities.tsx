@@ -9,27 +9,27 @@ const steps = [
         title: "Protection contre les prélèvements non autorisés", 
         description: "Vous pouvez bloquez ou désactiver une carte virtuelle après un achat, empêchant ainsi toute utilisation ultérieure non autorisée.", 
         // imageSrc: "/dashboard1.png" 
-        videoSrc: "/youtuber-step-1.mp4",
-        gifSrc: "/youtuber-step-1.gif"
+        videoSrc: "/freecompress-bloquerCarte.mp4",
+        // gifSrc: "/youtuber-step-1.gif"
     },
     
     { 
         title: "Utilisation unique ou récurrente", 
         description: "Nos cartes virtuelles peuvent être générées pour des paiements uniques ou récurrents, selon vos besoins.", 
         // imageSrc: "/dashboard3.png" 
-        videoSrc: "/youtuber-step-2.mp4"
+        videoSrc: "/freecompress-createcard.mp4"
     },
     { 
         title: "Options de personnalisation", 
         description: "Adaptez les paramètres de votre carte virtuelle leGombo selon vos préférences en modifiant l'apparence, avec des limites de dépense ajustables", 
         // imageSrc: "/dashboard2.png" 
-        videoSrc: "/youtuber-step-3.mp4"
+        videoSrc: "/freecompress-video1.mp4"
     },
     { 
         title: "Créez des Cartes Virtuelles pour vos proches", 
         description: "Vous pouvez créer une carte pour votre enfant ou toute autre personne tout en conservant un contrôle total. Gérez et rechargez facilement la carte selon vos besoins, tout en surveillant les dépenses en temps réel pour une tranquillité d'esprit totale.", 
         // imageSrc: "/dashboard2.png" 
-        videoSrc: "/youtuber-step-4.mp4"
+        videoSrc: "/freecompress-bloquerCarte.mp4"
     },
     
 ];
