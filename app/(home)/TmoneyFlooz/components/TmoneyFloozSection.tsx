@@ -38,13 +38,21 @@ const TmoneyFloozSection = () => {
                                     {isLoading ? (
                                         <Skeleton className="w-full h-[550px] rounded-lg" />
                                     ) : (
-                                        <iframe
-                                            src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY"
-                                            className="w-full h-[550px] rounded-lg"
-                                            frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        ></iframe>
+                                        // <iframe
+                                        //     src="https://www.youtube-nocookie.com/embed/CBHkOLLWYtY"
+                                        //     className="w-full h-[550px] rounded-lg"
+                                        //     frameBorder="0"
+                                        //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        //     allowFullScreen
+                                        // ></iframe>
+                                        <div >
+                                            <Image
+                                                src="/phone3.png"
+                                                alt="transfert logo"
+                                                width={900}
+                                                height={900}
+                                            />
+                                        </div>
                                     )}
                                 </motion.div>
                             </div>
