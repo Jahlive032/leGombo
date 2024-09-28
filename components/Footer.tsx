@@ -36,7 +36,7 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-gray-100">Legal</h3>
           <ul className="mt-4 text-white space-y-2">
             <li>
-              <a href="#">Politique de confidentialité</a>
+              <a href="/politique-de-confidentialité">Politique de confidentialité</a>
             </li>
             <li>
               <a href="#">Termes et Conditions</a>

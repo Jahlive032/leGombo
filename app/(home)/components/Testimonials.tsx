@@ -18,7 +18,7 @@ const reviews = [
   },
   {
     name: "Raoul AJAVON",
-    username: "Kpalimé, TOGO",
+    username: "Aneho, TOGO",
     body: "Je ne savais pas que transférer de l'argent de Tmoney vers Flooz était possible jusqu'à ce que j'utilise ce service. Tout est instantané, sécurisé, et cela m'a énormément simplifié la vie. Une véritable révolution dans les transactions mobiles au Togo.",
     img: "https://avatar.vercel.sh/john",
   },
