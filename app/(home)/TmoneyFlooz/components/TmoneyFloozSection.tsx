@@ -89,7 +89,7 @@ const TmoneyFloozSection = () => {
                                                     width={25}
                                                     height={25}
                                                 />
-                                                <span><strong>Accéssibilité</strong>: Processus simple et direct sans frais cachés.</span>
+                                                <span><strong>Accessibilité</strong>: Processus simple et direct sans frais cachés.</span>
                                             </li>
                                             <li className="flex space-x-3">
                                                 <Image

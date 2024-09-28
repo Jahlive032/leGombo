@@ -130,7 +130,7 @@ interface VideoPlayerProps {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc, videoRef }) => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full border-2 border-gray-200 rounded-lg">
       <video ref={videoRef} className="block w-full rounded-lg" muted>
         <source src={videoSrc} type="video/mp4" />
         Votre navigateur ne supporte pas cette vidéo.

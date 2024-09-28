@@ -23,10 +23,10 @@ const CardPresentation = () => {
     const content = {
         Personnalisation: {
             title: "Personnaliser une carte virtuelle ",
-            description1: "✅ Personnalisez selon vos gouts et selon vos besoins",
+            description1: "✅ Personnalisez selon vos goûts et selon vos besoins",
             description2: "✅ Créez et gardez le contrôle sur les transactions de vos enfants",
             description3: "✅ Obtenez une carte pour vos enfants et pour vos proches",
-            description4: "✅ Créez et gardez le contrôle sur les transactions de vos enfants",
+            // description4: "✅ Créez et gardez le contrôle sur les transactions de vos enfants",
 
             buttonText: "Générez votre carte",
             imgSrc: "/Metal Crypto Credit Card@5-1920x1080 (3).png",
@@ -34,8 +34,8 @@ const CardPresentation = () => {
         Avantage: {
             title: "Avantages de posséder une carte leGombo",
             description1: "✅ Commandez une carte en un clic",
-            description2: "✅ Plafonds de dépôts très attractifs et imbattable",
-            description3: "✅ Utilisez votre carte instantanément partout sur le net.",
+            description2: "✅ Plafonds de dépôts très attractifs et imbattables",
+            description3: "✅ Utilisez votre carte instantanément partout sur internet.",
             description4: "✅ Sécurité de vos transactions",
 
             buttonText: "Générez votre carte",
@@ -44,7 +44,7 @@ const CardPresentation = () => {
         Tarification: {
             title: "Tarification transparente et compétitive",
             description1: "✅ ZÉRO frais de gestion",
-            description2: "✅ ZÉRO frais pour ouverture de compte devise",
+            description2: "✅ ZÉRO frais pour ouverture de compte en devises",
             description3: "✅ ZÉRO frais sur les paiements",
             description4: "✅ ZÉRO frais de consultation de solde",
 
@@ -119,14 +119,14 @@ const CardPresentation = () => {
                         <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description1}</p>
                         <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description2}</p>
                         <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description3}</p>
-                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description4}</p>
+                        <p className="text-sm md:text-base text-gray-600 text-left mb-2">{content[activeSection].description1}</p>
 
                         <div className="flex flex-col sm:flex-row justify-between gap-4 mt-4 md:mt-6">
-                            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                            <Link href="https://app.legombo.com/register">
                                 <button className="w-full sm:w-auto bg-[#50c878] text-white py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold hover:bg-[#40a160] transition duration-300">
                                     {content[activeSection].buttonText}
                                 </button>
-                            {/* </Link> */}
+                            </Link>
 
                             <Link href="/card">
                                 <Button className="w-full sm:w-auto">

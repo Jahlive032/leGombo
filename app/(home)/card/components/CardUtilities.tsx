@@ -7,7 +7,7 @@ import StepByStep from "./StepByStep";
 const steps = [
     { 
         title: "Protection contre les prélèvements non autorisés", 
-        description: "Vous pouvez bloquez ou désactiver une carte virtuelle après un achat, empêchant ainsi toute utilisation ultérieure non autorisée.", 
+        description: "Vous pouvez bloquer ou désactiver une carte virtuelle après un achat, empêchant ainsi toute utilisation ultérieure non autorisée.", 
         // imageSrc: "/dashboard1.png" 
         videoSrc: "/freecompress-bloquerCarte.mp4",
         // gifSrc: "/youtuber-step-1.gif"

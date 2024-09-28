@@ -37,10 +37,11 @@ export default function NewSection() {
                     Créez des Cartes VISA et Mastercard Illimitées pour Vos Paiements en Ligne
                     </p>
                     <div className="flex space-x-4 max-md:justify-center">
-                      {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                      <Link href="https://app.legombo.com/register">
                       <button className="bg-black text-white px-6 py-3 rounded-full font-semibold">
                         Créez un compte
                       </button>
+                      </Link>
                     </div>
                   </div>
 
@@ -64,12 +65,12 @@ export default function NewSection() {
                     >
                       leGombo
                     </motion.span>         
-                        {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                        <Link href="https://app.legombo.com/register">
                           <button className="bg-[#c1f1c1] text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                             <span className="mr-1">+</span>
                             <span className="hidden sm:inline">Générez votre carte</span> 
                           </button>
-                        {/* </Link> */}
+                        </Link>
                       </div>
 
                       <div className="mb-8 z-10 relative">

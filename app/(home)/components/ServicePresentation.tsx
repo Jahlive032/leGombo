@@ -47,11 +47,11 @@ const ServicePresentation = () => {
               des frais transparents et des taux de change compétitifs.
             </p>
             <div className="rounded-full">
-              {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+              <Link href="https://app.legombo.com/register">
               <Button className="rounded-full bg-[#50c878] hover:">
-                Faîtes votre première transaction
+                Faites votre première transaction
               </Button>
-              {/* </Link> */}
+              </Link>
             </div>
           </div>
         </div>
@@ -81,12 +81,12 @@ const ServicePresentation = () => {
               paiement mobile du Togo.
             </p>
             <div className="rounded-full">
-            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+            <Link href="https://app.legombo.com/register">
 
               <Button className="rounded-full bg-[#50c878]">
-                Faîtes votre première transaction
+                Faites votre première transaction
               </Button>
-              {/* </Link> */}
+              </Link>
             </div>
           </div>
           <div className="rounded-lg">
@@ -130,11 +130,11 @@ const ServicePresentation = () => {
               portefeuille Mobile Money.
             </p>
             <div className="rounded-full">
-            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+            <Link href="https://app.legombo.com/register">
               <Button className="rounded-full bg-[#50c878]">
-                Faîtes votre première transaction
+                Faites votre première transaction
               </Button>
-              {/* </Link> */}
+              </Link>
             </div>
           </div>
         </div>
