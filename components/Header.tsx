@@ -286,12 +286,12 @@ const Header = () =>{
           </div>
               
           <div className='flex items-center gap-2'>
-            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+            <Link href="https://app.legombo.com/register">
               <Button variant={"outline"} className='bg-background'>S&apos;inscrire</Button>
-            {/* </Link> */}
-            {/* <Link href="https://ego-frontend-next.vercel.app/login"> */}
+            </Link>
+            <Link href="https://app.legombo.com/login">
               <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
     </header>
