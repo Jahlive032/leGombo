@@ -112,11 +112,11 @@ const PresentationStep: React.FC<PresentationStepProps> = ({ title, description,
       )}
       {isSelected && (
         <div className="py-3 text-center md:text-left">
-          {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+          <Link href="https://app.legombo.com/register">
           <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
             Ouvrez un compte
           </Button>
-          {/* </Link> */}
+          </Link>
         </div>
       )}
     </motion.div>
