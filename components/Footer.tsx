@@ -36,10 +36,10 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-gray-100">Legal</h3>
           <ul className="mt-4 text-white space-y-2">
             <li>
-              <a href="/politique-de-confidentialité">Politique de confidentialité</a>
+              <a href="/politique-de-confidentialite">Politique de confidentialité</a>
             </li>
             <li>
-              <a href="#">Termes et Conditions</a>
+              <a href="/termes-et-conditions-de-vente">Termes et Conditions de vente</a>
             </li>
           </ul>
         </div>
@@ -88,3 +88,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
