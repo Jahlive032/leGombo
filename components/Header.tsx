@@ -151,6 +151,9 @@ const Header = () =>{
               </ul>
             </div>
 
+            <Link href="https://app.legombo.com/install/guide">Guide d&apos;utilisation</Link>
+
+
             <Link href="/contact">Contact</Link>
           </div>
           
@@ -274,6 +277,15 @@ const Header = () =>{
                   </div>
                 )}
               </li>
+              <li>
+                <Link
+                  href="https://app.legombo.com/install/guide"
+                  className="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-white dark:hover:bg-gray-700 dark:hover:text-[#50c878] md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Guide d&apos;utilisation
+                </Link>
+              </li>
+
               <li>
                 <a
                   href="/contact"
