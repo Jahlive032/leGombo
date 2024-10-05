@@ -38,9 +38,9 @@ const BenefitsCard = () =>{
                                     <div className="text-center md:text-left text-3xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-800 from-10% to-orange-700 to-60% mt-5">
                                         <h1 className="py-2">Avec nos cartes, vous bénéficiez de:</h1>
                                     </div>
-                                    <div className="mb-5">
+                                    {/* <div className="mb-5">
                                         <p className="text-xl md:text-left text-center">Grâce à notre solution, vous pouvez créer des cartes virtuelles personnalisées en quelques clics, adaptées à vos besoins, que ce soit pour des achats uniques ou des abonnements récurrents</p>
-                                    </div>
+                                    </div> */}
 
                                     <div>
                                         <ul className=" space-y-5 border-gray-200">

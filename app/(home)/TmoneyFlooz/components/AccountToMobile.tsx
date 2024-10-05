@@ -12,7 +12,7 @@ import Link from "next/link";
 const AccountToMobile = () =>{
 
     return(
-        <section id="section2" className="bg-yellow-200">
+        <section id="section2" className="bg-blue-200">
             <div>
                 <div className=" ">
                     <div className="container">
@@ -25,7 +25,7 @@ const AccountToMobile = () =>{
                                     transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
                                     className=""
                                 >
-                                    <div className="text-center md:text-left text-4xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-800 from-10% to-black to-60% mt-5">
+                                    <div className="text-center md:text-left text-4xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-800 from-10% to-black to-60% mt-5">
                                         <h1 className="py-3">Opter pour des Transferts de Carte Bancaire vers Tmoney et Flooz</h1>
                                     </div>
                                     <div>

@@ -10,6 +10,47 @@ import logo from "@/public/logo4.png"
 import logoMenu from "@/assets/menu.svg"
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "./ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import React from "react";
+
+// const components: { title: string; href: string; description: string }[] = [
+//   {
+//     title: "Alert Dialog",
+//     href: "/docs/primitives/alert-dialog",
+//     description:
+//       "A modal dialog that interrupts the user with important content and expects a response.",
+//   },
+//   {
+//     title: "Hover Card",
+//     href: "/docs/primitives/hover-card",
+//     description:
+//       "For sighted users to preview content available behind a link.",
+//   },
+//   {
+//     title: "Progress",
+//     href: "/docs/primitives/progress",
+//     description:
+//       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+//   },
+//   {
+//     title: "Scroll-area",
+//     href: "/docs/primitives/scroll-area",
+//     description: "Visually or semantically separates content.",
+//   },
+//   {
+//     title: "Tabs",
+//     href: "/docs/primitives/tabs",
+//     description:
+//       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+//   },
+//   {
+//     title: "Tooltip",
+//     href: "/docs/primitives/tooltip",
+//     description:
+//       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+//   },
+// ]
 
 const Header = () =>{
 
@@ -53,15 +94,15 @@ const Header = () =>{
         </SheetTrigger>
         <SheetContent>
           <div className='flex flex-col items-center'>
-          <div className="flex flex-col gap-5 mr-[100px]">
-            <Link href="/" >Acceuil</Link>
+            <div className="flex flex-col gap-5 mr-[100px]">
+              <Link href="/" >Accueil</Link>
 
             <div className="md:flex md:items-center md:justify-between w-full">
               <ul className="flex flex-col font-medium md:flex-row md:mt-0 ">
                 
                 <li className="relative">
                   <button
-                    className="flex items-center justify-between w-full text-gray-900 border-gray-100 hover:bg-gray-50 md:w-auto md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-white dark:hover:bg-gray-700 dark:hover:text-[#50c878] md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="flex items-center justify-between w-full text-gray-900 border-gray-100 hover:bg-gray-50 md:w-auto md:hover:bg-transparent  md:hover:text-[#50c878] dark:text-white dark:hover:bg-gray-700 dark:hover:text-[#50c878] md:dark:hover:bg-transparent outline-none"
                     onClick={toggleDropdown}
                   >
                     Services
@@ -96,7 +137,7 @@ const Header = () =>{
                               href="/card"
                               className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
                             >
-                              Carte
+                              Carte Virtuelle
                             </a>
                           </li>
                           <li className="flex items-center gap-2">
@@ -170,7 +211,7 @@ const Header = () =>{
         </SheetContent>
 
       </Sheet>
-        <div className='hidden md:flex items-center gap-2'>
+        {/* <div className='hidden md:flex items-center gap-2'>
           <div className="md:flex md:items-center md:justify-between w-full">
             <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8">
               <li>
@@ -178,7 +219,7 @@ const Header = () =>{
                   href="/"
                   className="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-[#50c878] dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  Acceuil
+                  Accueil
                 </a>
               </li>
               <li className="relative">
@@ -218,7 +259,7 @@ const Header = () =>{
                             href="/card"
                             className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500"
                           >
-                            Carte
+                            Carte Virtuelle
                           </a>
                         </li>
                         <li className="flex items-center gap-2">
@@ -279,7 +320,7 @@ const Header = () =>{
               </li>
               <li>
                 <Link
-                  href="https://app.legombo.com/install/guide"
+                  href="/install-guide"
                   className="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#50c878] dark:text-white dark:hover:bg-gray-700 dark:hover:text-[#50c878] md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Guide d&apos;installation
@@ -305,9 +346,109 @@ const Header = () =>{
               <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
             </Link>
           </div>
-        </div>
+        </div> */}
+
+<NavigationMenu className="hidden md:flex items-center gap-2">
+      <NavigationMenuList>
+      <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Accueil
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <li className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    href="/card"
+                  >
+                    {/* <Icons.logo className="h-6 w-6" /> */}
+                    <Image src="/icons/virtual-card-icon.svg" height={40} width={40} alt="virtual-card-icon"/>
+                    <div className="mb-2 mt-4 text-lg font-medium">
+                      Carte Virtuelle
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                    Obtenez une carte virtuelle sécurisée pour vos achats en ligne. Pratique, 
+                    instantanée et contrôlable. Profitez d&apos;une expérience d&apos;achat sans frontières.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+              <ListItem href="/internationalTransfert" title="Transfert International">
+              Recevez de l&apos;argent au Togo depuis l&apos;étranger rapidement et en toute sécurité. 
+              Profitez de taux compétitifs et d&apos;un service fiable pour vos transferts entrants.              
+              </ListItem>
+              <ListItem href="/TmoneyFlooz" title="Transfert entre Tmoney et Flooz">
+              Transférez facilement de l&apos;argent entre les plateformes Tmoney et Flooz. 
+              Une solution pratique pour gérer vos fonds sur différents services de mobile money.              
+              </ListItem>
+              <ListItem href="/TmoneyFlooz#section2" title="Carte bancaire vers Mobile money">
+              Rechargez votre compte mobile money directement depuis votre carte bancaire. 
+              Un moyen simple et rapide d&apos;alimenter votre portefeuille électronique.              
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+       
+        <NavigationMenuItem>
+          <Link href="/install-guide" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Guide d&apos;installation
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+      <div className='flex items-center gap-2'>
+            <Link href="https://app.legombo.com/register">
+              <Button variant={"outline"} className='bg-background'>S&apos;inscrire</Button>
+            </Link>
+            <Link href="https://app.legombo.com/login">
+              <Button className="bg-[#50c878] hover:bg-[#50c878]">Se connecter</Button>
+            </Link>
+          </div>
+    </NavigationMenu>
     </header>
   )
 }
 
+
+
 export default Header;
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground group-hover:line-clamp-none transition-all duration-300 ease-in-out">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"

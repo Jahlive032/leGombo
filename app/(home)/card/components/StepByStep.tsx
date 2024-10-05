@@ -21,12 +21,29 @@ const PresentationSteps: React.FC<PresentationStepsProps> = ({ steps }) => {
   const [selectedStepIndex, setSelectedStepIndex] = useState<number>(0);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [progress, setProgress] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.play();
-    }
+    const loadAndPlayVideo = async () => {
+      if (videoRef.current) {
+        setIsLoading(true);
+        try {
+          await Promise.all([
+            new Promise<void>((resolve) => {
+              videoRef.current!.onloadeddata = () => resolve();
+              videoRef.current!.load();
+            }),
+            videoRef.current.play()
+          ]);
+        } catch (error) {
+          console.error("Error loading or playing video:", error);
+        } finally {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadAndPlayVideo();
   }, [selectedStepIndex]);
 
   useEffect(() => {
@@ -66,7 +83,11 @@ const PresentationSteps: React.FC<PresentationStepsProps> = ({ steps }) => {
         ))}
       </motion.div>
       <div className="w-full md:w-1/2">
-        <VideoPlayer videoSrc={steps[selectedStepIndex].videoSrc} videoRef={videoRef} />
+        <VideoPlayer 
+          videoSrc={steps[selectedStepIndex].videoSrc} 
+          videoRef={videoRef}
+          isLoading={isLoading}
+        />
       </div>
     </div>
   );
@@ -126,11 +147,17 @@ const PresentationStep: React.FC<PresentationStepProps> = ({ title, description,
 interface VideoPlayerProps {
   videoSrc: string;
   videoRef: React.RefObject<HTMLVideoElement>;
+  isLoading: boolean;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc, videoRef }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc, videoRef, isLoading }) => {
   return (
     <div className="relative w-full h-full border-2 border-gray-200 rounded-lg">
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 bg-opacity-50">
+          <p>Chargement...</p>
+        </div>
+      )}
       <video ref={videoRef} className="block w-full rounded-lg" muted>
         <source src={videoSrc} type="video/mp4" />
         Votre navigateur ne supporte pas cette vidéo.

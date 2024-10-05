@@ -112,26 +112,30 @@ export default function HeroSection() {
   }
 
   return (
-    <div>
+    <div className="mb-32">
         <h1 className="text-5xl font-bold mb-4 text-center py-20">Contact</h1>
 
-        <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden max-w-6xl mx-auto shadow-2xl my-20">
+        <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden max-w-6xl mx-auto shadow-2xl my-10 ">
         
-        <div className="w-full md:w-1/2 p-8">
+        <div className="w-full md:w-1/2 px-8 pb-8">
         <div className="mb-6">
           {/* <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L1 12H4V22H20V12H23L12 2Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg> */}
-          <Image
+          {/* <Image
             src="/Sans titre (96 x 96 px).png"
             alt="map"
             width={40}
             height={40}
-          />
+          /> */}
           {/* <span className="ml-2 font-bold">Untitled UI</span> */}
         </div>
         <h2 className="text-3xl font-bold mb-4">Nous sommes à votre écoute</h2>
-        <p className="text-gray-600 mb-6">Nous sommes une agence de service avec des experts prêts à vous aider. Nous vous contacterons dans les 24 heures.</p>
+        <p className="text-gray-600 mb-6">
+          {/* Nous sommes une agence de service avec des experts prêts à vous aider. Nous vous contacterons dans les 24 heures. */}
+          Nous sommes une agence de services financiers numériques (Fintech) avec une équipe d&apos;experts prêts à vous aider.
+          Laissez nous un message maintenant. Nous vous contacterons dans un délai maximum de 24h
+        </p>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
