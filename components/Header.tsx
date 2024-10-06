@@ -351,7 +351,7 @@ const Header = () =>{
 <NavigationMenu className="hidden md:flex items-center gap-2">
       <NavigationMenuList>
       <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Accueil
             </NavigationMenuLink>

@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="text-center md:text-left">
           <h3 className="text-lg font-bold text-gray-100">Pays</h3>
-          <ul className="mt-4 text-white space-y-2">
+          <ul className="mt-4 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center md:justify-start gap-2">
             <a href="#" className="flex items-center justify-center md:justify-start gap-2">
               <Image src="/togo.png" alt="logo togo" width={20} height={20} />
               <span>Togo</span>
