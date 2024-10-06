@@ -14,7 +14,7 @@ export default function CardPersentation() {
             <div className='md:flex items-center'>
                 <div className="md:w-[478px] py-10 z-20">
                     <h1 className="mb-4 text-4xl sm:text-5xl tracking-tight font-bold md:text-left text-gray-900 text-center">
-                        Joignez vos dépenses avec nos différentes cartes
+                        Gérez vos dépenses avec nos différentes cartes
                         <WordRotate
                             className="mb-4 text-4xl sm:text-5xl tracking-tight font-bold md:text-left text-[#50c878] text-center"
                             duration={2500}
@@ -23,11 +23,11 @@ export default function CardPersentation() {
                     </h1>                    
                     <p className="text-xl sm:text-2xl text-center md:text-left">Simplifiez vos achats en ligne avec nos cartes virtuelles innovantes.</p>
                     <div className="mt-[30px] sm:flex items-center justify-center text-center md:justify-start">
-                    {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                    <Link href="https://app.legombo.com/register">
                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                             Ouvrez un compte
                         </Button>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 </div>
                 

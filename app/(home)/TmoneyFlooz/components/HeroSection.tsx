@@ -22,17 +22,16 @@ const HeroSection = () =>{
                         className="md:w-[500px] items-center"
                     >
                         <h1 className="mb-4 text-4xl sm:text-5xl  md:text-left mx-auto gap-5 tracking-tight font-bold text-gray-900 text-center">
-                            Le meilleur service de Transfert d&apos;Argent au Togo
-                        </h1>
+                        Le service de transfert d&apos;argent le plus complet au Togo                        </h1>
                         <p className="text-xl sm:text-2xl text-center md:text-left">
                             Envoyer de l&apos;argent à votre famille, à des amis, ou régler des transactions commerciales
                         </p>
                         <div className="mt-[30px] flex items-center justify-center text-center md:justify-start">
-                            {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                            <Link href="https://app.legombo.com/register">
                             <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                Faites votre première transaction
                             </Button>
-                            {/* </Link> */}
+                            </Link>
                         </div>
                     </motion.div>
 

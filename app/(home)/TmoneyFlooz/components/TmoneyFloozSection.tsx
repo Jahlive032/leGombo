@@ -64,7 +64,7 @@ const TmoneyFloozSection = () => {
                                     transition={{ delay: 0.5, duration: 0.7, ease: "easeInOut" }}
                                     className=""
                                 >
-                                    <div className="text-center md:text-left text-3xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 from-10% to-black to-60% mt-5">
+                                    <div className="text-center md:text-left text-3xl font-semibold mb-4 sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-green-500 from-10% to-black to-60% mt-5">
                                         <h1 className="py-5">Transfert Facile entre Tmoney et Flooz</h1>
                                     </div>
                                     <div>
@@ -113,11 +113,11 @@ const TmoneyFloozSection = () => {
                                     </div>
 
                                     <div className="mt-[30px] md:text-left text-center">
-                                        {/* <Link href="https://ego-frontend-next.vercel.app/register"> */}
+                                        <Link href="https://app.legombo.com/register">
                                         <Button className="cursor-pointer bg-[#50c878]" size={"lg"}>
                                             Transférer maintenant
                                         </Button>
-                                        {/* </Link> */}
+                                        </Link>
                                     </div>
                                 </motion.div>
                             </div>
