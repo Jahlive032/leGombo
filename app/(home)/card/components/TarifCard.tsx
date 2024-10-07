@@ -7,23 +7,23 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pricingTiers = [
-    {
-        index: 1,
-        title: "Oneshot",
-        price: 1000,
-        buttonText: "Génerez votre carte",
-        popular: false,
-        vip: false,
-        pack: false,
-        inverse: false,
-        features: [
-            "Usage unique",
-            // "1 an de validité",
-            // "4% de frais de dépôt",
-            "Type de carte accepté: Visa",
+    // {
+    //     index: 1,
+    //     title: "Oneshot",
+    //     price: 1000,
+    //     buttonText: "Génerez votre carte",
+    //     popular: false,
+    //     vip: false,
+    //     pack: false,
+    //     inverse: false,
+    //     features: [
+    //         "Usage unique",
+    //         // "1 an de validité",
+    //         // "4% de frais de dépôt",
+    //         "Type de carte accepté: Visa",
             
-        ],
-    },
+    //     ],
+    // },
     {
         index: 2,
         title: "Basic",
@@ -36,7 +36,7 @@ const pricingTiers = [
         features: [
             "2 ans de validité",
             // "4% de frais de dépôt",
-            "500 FCFA/an de frais de maintenance",
+            "1000 FCFA/an de frais de maintenance",
             "Type de carte accepté: Visa, Mastercard"
         ]
     },
@@ -85,7 +85,7 @@ const TarifCard = () =>{
                             Nos tarifs
                         </h1>
 
-                        <div className="flex flex-col md:flex-row gap-6 items-center mt-10 lg:items-end lg:justify-center h-[500px] max-md:h-auto">
+                        <div className="flex flex-col md:flex-row gap-20 items-center mt-10 lg:items-end lg:justify-between h-[500px] max-md:h-auto">
                             {pricingTiers.map(({ index, title, price, buttonText, popular, vip, pack, inverse, features }) =>(
                                 <div key={index} className={twMerge("card bg-white", inverse === true && 'border-black bg-[#50c878] text-white')}>
                                     <div className="flex justify-between">
