@@ -3,13 +3,11 @@
 import WordRotate from '@/components/magicui/word-rotate';
 import { Button } from '@/components/ui/button';
 import Spline from '@splinetool/react-spline/next';
-import Image from 'next/image';
-import image from "@/public/3d-business-phone-and-card-standing.png"
 import Link from 'next/link';
 
 export default function CardPersentation() {
   return (
-    <main className='py-20'>
+    <main className='py-10'>
         <div className='container w-[80%] mx-auto'>
             <div className='md:flex items-center'>
                 <div className="md:w-[478px] py-10 z-20">

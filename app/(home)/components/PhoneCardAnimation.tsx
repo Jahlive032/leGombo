@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import carteBancaire from "@/public/carte.png"
+import carteBancaire from "@/public/creditCarte.png"
 import phone1 from '@/assets/eGoTransfer1 (1).webp'
 import legombophone from '@/public/691shots_so.png'
 
@@ -62,8 +62,8 @@ const PhoneCardAnimation: React.FC = () => {
                 <Image
                   src={carteBancaire}
                   alt=''
-                  width={700}
-                  height={700}
+                  width={800}
+                  height={800}
                   style={{ display: isHidden ? "none" : ""}}
                   className='-z-10 absolute'
                 />

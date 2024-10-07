@@ -102,7 +102,8 @@ const HeroSection = () =>{
                                     transition={{ duration: 0.6, delay: 0.5 }}
                                     className=" mb-4 font-extrabold tracking-tight text-center md:text-left leading-none text-4xl xl:text-4xl text-[#50c878]"
                                 >
-                                    leGombo, tous vos portefeuilles électroniques en 1
+                                    Bienvenue chez leGombo!
+                                    {/* leGombo, tous vos portefeuilles électroniques en 1 */}
                                 </motion.h1>
                                 <motion.h3
                                     initial={{ opacity: 0, y: 50 }}
@@ -110,7 +111,7 @@ const HeroSection = () =>{
                                     transition={{ duration: 0.6, delay: 0.5 }}
                                     className="mt-3 text-2xl text-center md:text-left text-muted-foreground text-black"
                                 >
-                                    Fini les galères de transferts d&apos;argent entre opérateurs mobiles et entre opérateurs bancaires.                               
+                                    Fini les galères de transferts d&apos;argent entre opérateurs mobiles et des paiments en ligne.                               
                                 </motion.h3>
 
                                 <motion.h3
