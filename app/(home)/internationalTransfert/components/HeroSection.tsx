@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import dollar from "@/assets/single-fake-gold-dollar-coin.png"
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () =>{
 
@@ -37,7 +38,13 @@ const HeroSection = () =>{
                     </motion.div>
 
              
-                        <MacbookScroll/>
+                        <MacbookScroll
+                            badge={
+                                <Link href="https://peerlist.io/manuarora">
+                                  <Badge className="h-10 w-10 transform -rotate-12" />
+                                </Link>
+                            }
+                        />
                   
 
                     <motion.img
@@ -70,3 +77,14 @@ const HeroSection = () =>{
 }
 
 export default HeroSection;
+
+const Badge = ({ className }: { className?: string }) => {
+    return (
+      <Image 
+        src={"/logo_1.png"} 
+        alt="capture" 
+        width={60} 
+        height={60} 
+    />
+    );
+  };
