@@ -80,7 +80,7 @@ const Footer = () => {
 
       <div className="flex items-center justify-center">
         <p className="text-gray-100">
-          &copy; {new Date().getFullYear()} DAC Services et EGO. Tous droits réservés.
+          &copy; {new Date().getFullYear()} leGombo. Tous droits réservés.
         </p>
       </div>
     </footer>
