@@ -79,8 +79,8 @@ const Footer = () => {
       <hr className="border-white w-[90%] mx-auto my-4" />
 
       <div className="flex items-center justify-center">
-        <p className="text-gray-100">
-          &copy; {new Date().getFullYear()} DAC Services et EGO. Tous droits réservés.
+        <p className="text-gray-200">
+          &copy; {new Date().getFullYear()} leGombo. Tous droits réservés.
         </p>
       </div>
     </footer>

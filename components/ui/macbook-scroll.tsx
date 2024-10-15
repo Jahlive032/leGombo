@@ -42,7 +42,7 @@ export const MacbookScroll = ({
     offset: ["start start", "end start"],
   });
 
-  const captureString = require('@/assets/capture1.png') as string;
+  const captureString = require('@/public/tableaudebord.png') as string;
 
   const [isMobile, setIsMobile] = useState(false);
 
